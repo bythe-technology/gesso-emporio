@@ -13,8 +13,9 @@ import {
 export const SITE_URL = "https://gesso-emporio.vercel.app";
 export const WHATSAPP_NUMBER = "5513996103288";
 export const PHONE_LABEL = "(13) 99610-3288";
-export const ADDRESS = "Rua São Nicolau, 25 — Jardim São Nicolau, Registro/SP";
-export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Rua+S%C3%A3o+Nicolau+25+Jardim+S%C3%A3o+Nicolau+Registro+SP";
+export const ADDRESS = "Rua São Nicolau, 218 — Vila São Nicolau, Registro/SP";
+export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Gesso+Emp%C3%B3rio+Registro+SP";
+export const MAPS_EMBED_URL = "https://www.google.com/maps?q=Gesso+Emp%C3%B3rio%2C+Registro%2C+SP&output=embed";
 export const INSTAGRAM_URL = "https://www.instagram.com/gessoemporio/";
 
 export type MaterialCategory = {
@@ -27,8 +28,8 @@ export type MaterialCategory = {
   items: string[];
   benefits: string[];
   icon: LucideIcon;
-  image?: string;
-  imageAlt?: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const categories: MaterialCategory[] = [
@@ -42,6 +43,8 @@ export const categories: MaterialCategory[] = [
     items: ["Drywall", "PVC", "Vinílicos", "Isopor", "Mineral", "Acústicos"],
     benefits: ["Alternativas para áreas secas e úmidas", "Opções térmicas e acústicas", "Materiais para obras residenciais e comerciais"],
     icon: PanelsTopLeft,
+    image: "/images/materiais-forros-divisorias.webp",
+    imageAlt: "Amostras de forros em PVC, mineral, acústico e componentes para acabamento",
   },
   {
     slug: "divisorias",
@@ -53,6 +56,8 @@ export const categories: MaterialCategory[] = [
     items: ["Drywall", "PVC", "Eucatex", "Divisórias sanitárias"],
     benefits: ["Montagem prática", "Boa variedade de acabamentos", "Soluções para diferentes tipos de ambiente"],
     icon: Rows3,
+    image: "/images/materiais-forros-divisorias.webp",
+    imageAlt: "Painéis, perfis e materiais para divisórias comercializados pela Gesso Empório",
   },
   {
     slug: "pisos-e-decks",
@@ -64,8 +69,8 @@ export const categories: MaterialCategory[] = [
     items: ["Vinílicos", "Laminados", "Carpete em placas Shaw", "Pisos para academia", "Deck WPC"],
     benefits: ["Opções para alto tráfego", "Conforto e fácil manutenção", "Alternativas para áreas internas e externas"],
     icon: Layers3,
-    image: "/images/deck-wpc.jpg",
-    imageAlt: "Aplicação de deck WPC comercializado pela Gesso Empório",
+    image: "/images/materiais-pisos-acabamentos.webp",
+    imageAlt: "Amostras de pisos vinílicos, laminados, WPC e revestimentos",
   },
   {
     slug: "iluminacao",
@@ -77,6 +82,8 @@ export const categories: MaterialCategory[] = [
     items: ["Spots", "Plafons", "Fitas e mangueiras LED", "Pendentes", "Trilhos", "Refletores"],
     benefits: ["Soluções decorativas e funcionais", "Opções para áreas internas e externas", "Variedade de formatos e potências"],
     icon: Lightbulb,
+    image: "/images/materiais-iluminacao-ferramentas.webp",
+    imageAlt: "Spots, plafons, fitas de LED, pendentes e refletores em exposição",
   },
   {
     slug: "revestimentos-e-acabamentos",
@@ -88,6 +95,8 @@ export const categories: MaterialCategory[] = [
     items: ["Ripados internos", "Ripados externos", "Papéis adesivos", "Molduras e complementos"],
     benefits: ["Aplicação prática", "Diversidade de cores e texturas", "Soluções para renovar sem grandes intervenções"],
     icon: PaintRoller,
+    image: "/images/materiais-pisos-acabamentos.webp",
+    imageAlt: "Ripados, papéis adesivos e amostras de revestimentos e acabamentos",
   },
   {
     slug: "ferramentas-e-acessorios",
@@ -99,6 +108,8 @@ export const categories: MaterialCategory[] = [
     items: ["Ferramentas elétricas", "Ferramentas manuais", "Fixadores", "Acessórios de instalação", "Itens de medição"],
     benefits: ["Produtos para profissionais e reformas", "Compatibilidade com sistemas a seco", "Praticidade para completar a lista de obra"],
     icon: Hammer,
+    image: "/images/materiais-iluminacao-ferramentas.webp",
+    imageAlt: "Ferramentas, acessórios e itens de instalação para construção a seco",
   },
   {
     slug: "gesso-e-drywall",
@@ -110,8 +121,8 @@ export const categories: MaterialCategory[] = [
     items: ["Gesso", "Placas de drywall", "Massas", "Perfis", "Complementos de instalação"],
     benefits: ["Soluções para diferentes etapas da obra", "Materiais para sistemas completos", "Atendimento para conferir a sua lista"],
     icon: BrickWall,
-    image: "/images/placa-performa.jpg",
-    imageAlt: "Placa Performa para ambientes de alto tráfego, disponível na Gesso Empório",
+    image: "/images/materiais-drywall.webp",
+    imageAlt: "Placas de drywall, perfis metálicos, massas e componentes para construção a seco",
   },
   {
     slug: "steel-frame",
@@ -130,8 +141,13 @@ export const categories: MaterialCategory[] = [
 
 export const testimonials = [
   {
-    quote: "Bom atendimento, fácil acesso e preços justos.",
+    quote: "Uma loja completa. Material e ferramental para construção a seco. Bom atendimento, fácil acesso e preços justos. Recomendo.",
     author: "Marcelo Feitoza",
+    source: "Avaliação no Google",
+  },
+  {
+    quote: "Atendimento qualificado, variedade de produtos e melhor preço da região.",
+    author: "Ingrydi Reis",
     source: "Avaliação no Google",
   },
   {
@@ -139,8 +155,24 @@ export const testimonials = [
     author: "Kelly Silva Pacheco",
     source: "Avaliação no Google",
   },
+  {
+    quote: "Lá você encontra de tudo para gesso, PVC e outros. Pessoal atencioso e amigável. Super recomendo.",
+    author: "Eubio",
+    source: "Avaliação no Google",
+  },
+  {
+    quote: "Atendimento ótimo, equipe bem-humorada.",
+    author: "Carlos Carvalho",
+    source: "Avaliação no Google",
+  },
+  {
+    quote: "Atendimento e tudo que precisa para drywall. Loja top, top, top.",
+    author: "Mateus Vitor Souza Forte",
+    source: "Avaliação no Google",
+  },
 ] as const;
 
 export function getCategory(slug: string) {
   return categories.find((category) => category.slug === slug);
 }
+

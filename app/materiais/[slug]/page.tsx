@@ -28,6 +28,8 @@ export default async function MaterialCategoryPage({ params }: Props) {
   return (
     <>
       <section className="category-hero">
+        <Image className="category-hero-background" src={category.image} alt={category.imageAlt} fill loading="eager" fetchPriority="high" sizes="100vw" />
+        <span className="category-hero-shade" aria-hidden="true" />
         <div className="container category-hero-grid">
           <div className="category-copy">
             <Link className="back-link" href="/materiais"><ArrowLeft size={17} /> Todos os materiais</Link>
@@ -36,9 +38,6 @@ export default async function MaterialCategoryPage({ params }: Props) {
             <h1>{category.name}</h1>
             <p>{category.intro}</p>
             <a className="button button-primary" href={buildWhatsAppUrl({ category: category.name })} target="_blank" rel="noreferrer"><WhatsAppIcon width={18} height={18} /> Consultar no WhatsApp</a>
-          </div>
-          <div className={`category-art ${category.image ? "has-image" : ""}`}>
-            {category.image ? <Image src={category.image} alt={category.imageAlt ?? category.name} fill loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 45vw" /> : <><Icon aria-hidden="true" /><span>{category.shortName}</span></>}
           </div>
         </div>
       </section>

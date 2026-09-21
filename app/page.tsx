@@ -1,9 +1,9 @@
-import { ArrowRight, BadgeCheck, MapPin, PackageCheck, Star, Truck } from "lucide-react";
+import { ArrowRight, BadgeCheck, MapPin, Star } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { MaterialCard } from "@/components/material-card";
-import { ADDRESS, categories, MAPS_URL, testimonials } from "@/lib/site-data";
+import { ADDRESS, categories, MAPS_EMBED_URL, MAPS_URL, testimonials } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
 
@@ -13,6 +13,8 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
+        <Image className="hero-background" src="/images/showroom-materiais.png" alt="" fill loading="eager" fetchPriority="high" sizes="100vw" aria-hidden="true" />
+        <span className="hero-shade" aria-hidden="true" />
         <div className="container hero-grid">
           <div className="hero-copy">
             <span className="eyebrow"><span /> O shopping da construção a seco</span>
@@ -30,16 +32,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero-visual">
-            <div className="hero-image-wrap">
-              <Image src="/images/showroom-materiais.png" alt="Showroom com materiais para construção a seco, pisos, iluminação e acabamentos" fill loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 50vw" />
-            </div>
-            <div className="hero-float-card">
-              <span className="float-icon"><PackageCheck /></span>
-              <div><strong>Do piso ao teto</strong><small>Variedade para completar sua lista.</small></div>
-            </div>
-            <div className="hero-orange-mark" aria-hidden="true" />
-          </div>
         </div>
       </section>
 
@@ -88,12 +80,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section service-section">
+      <section className="service-section">
+        <Image className="service-background" src="/images/fachada-gesso-emporio-tratada.webp" alt="Fachada da Gesso Empório em Registro, São Paulo" fill sizes="100vw" />
+        <span className="service-shade" aria-hidden="true" />
         <div className="container service-grid">
-          <div className="service-visual">
-            <Image src="/images/caminhao-gesso-emporio.png" alt="Caminhão da Gesso Empório para atendimento no Vale do Ribeira" fill sizes="(max-width: 900px) 100vw, 45vw" />
-            <div className="service-label"><Truck /><span>Atendimento em todo o Vale do Ribeira</span></div>
-          </div>
           <div className="service-copy">
             <span className="eyebrow"><span /> Atendimento de verdade</span>
             <h2>Você traz a ideia.<br />A gente ajuda com os materiais.</h2>
@@ -106,12 +96,16 @@ export default function HomePage() {
             <p className="clarity-note">A Gesso Empório atua exclusivamente com venda de materiais e não realiza instalação.</p>
             <a className="button button-light" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer">Conversar com a equipe <ArrowRight size={18} /></a>
           </div>
+          <div className="storefront-brand" aria-label="Gesso Empório, loja física em Registro">
+            <Image src="/images/logo-gesso-emporio.png" alt="Gesso Empório" width={310} height={145} />
+            <span><MapPin size={18} /> Loja física em Registro/SP</span>
+          </div>
         </div>
       </section>
 
       <section className="section testimonials-section">
         <div className="container">
-          <div className="section-heading centered-heading"><span className="eyebrow eyebrow-dark"><span /> Quem compra, recomenda</span><h2>Atendimento que faz diferença.</h2></div>
+          <div className="section-heading centered-heading"><span className="eyebrow eyebrow-dark"><span /> Quem compra, recomenda</span><h2>Atendimento que faz diferença.</h2><a className="google-rating" href={MAPS_URL} target="_blank" rel="noreferrer"><strong>4,7</strong><span className="stars" aria-hidden="true">★★★★★</span><span>26 avaliações no Google</span></a></div>
           <div className="testimonials-grid">
             {testimonials.map((testimonial) => (
               <blockquote key={testimonial.author} className="testimonial-card">
@@ -133,7 +127,7 @@ export default function HomePage() {
             <div className="hours"><strong>Segunda a sexta</strong><span>7h30 às 18h</span><strong>Sábado</strong><span>7h30 às 13h</span></div>
             <a className="button button-primary" href={MAPS_URL} target="_blank" rel="noreferrer"><MapPin size={18} /> Abrir no mapa</a>
           </div>
-          <div className="map-pattern" aria-hidden="true"><span className="map-pin"><MapPin /></span></div>
+          <div className="map-frame"><iframe src={MAPS_EMBED_URL} title="Mapa da Gesso Empório em Registro" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div>
         </div>
       </section>
 
@@ -146,3 +140,4 @@ export default function HomePage() {
     </>
   );
 }
+

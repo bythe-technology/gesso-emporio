@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Clock3, MapPin } from "lucide-react";
+import Image from "next/image";
 import { QuoteForm } from "@/components/quote-form";
-import { ADDRESS, INSTAGRAM_URL, MAPS_URL, PHONE_LABEL } from "@/lib/site-data";
+import { ADDRESS, INSTAGRAM_URL, MAPS_EMBED_URL, MAPS_URL, PHONE_LABEL } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { InstagramIcon, WhatsAppIcon } from "@/components/social-icons";
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = { title: "Contato", description: "Fale com a G
 export default function ContactPage() {
   return (
     <>
-      <section className="page-hero contact-hero"><div className="container page-hero-inner"><span className="eyebrow"><span /> Fale com a equipe</span><h1>Conte o que<br /><em>sua obra precisa.</em></h1><p>Envie sua lista, tire dúvidas sobre as linhas e consulte a disponibilidade dos materiais.</p></div></section>
+      <section className="page-hero contact-hero"><Image className="page-hero-background" src="/images/materiais-iluminacao-ferramentas.webp" alt="Materiais e ferramentas disponíveis na Gesso Empório" fill priority sizes="100vw" /><span className="page-hero-shade" aria-hidden="true" /><div className="container page-hero-inner"><span className="eyebrow"><span /> Fale com a equipe</span><h1>Conte o que<br /><em>sua obra precisa.</em></h1><p>Envie sua lista, tire dúvidas sobre as linhas e consulte a disponibilidade dos materiais.</p></div></section>
       <section className="section contact-section">
         <div className="container contact-grid">
           <div className="contact-info">
@@ -25,6 +26,8 @@ export default function ContactPage() {
           <div className="form-panel"><span>Pedido rápido</span><h2>Monte sua mensagem.</h2><p>Preencha os dados abaixo e continue a conversa no WhatsApp.</p><QuoteForm /></div>
         </div>
       </section>
+      <section className="section contact-map-section"><div className="container"><div className="map-frame map-frame-wide"><iframe src={MAPS_EMBED_URL} title="Mapa da Gesso Empório em Registro" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div></section>
     </>
   );
 }
+

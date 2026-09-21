@@ -44,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     logo: `${SITE_URL}/images/logo-gesso-emporio.png`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua São Nicolau, 25 — Jardim São Nicolau",
+      streetAddress: "Rua São Nicolau, 218 — Vila São Nicolau",
       addressLocality: "Registro",
       addressRegion: "SP",
       addressCountry: "BR",
@@ -56,6 +56,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "07:30", closes: "13:00" },
     ],
     priceRange: "$$",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.7",
+      reviewCount: "26",
+    },
     description: "Loja de materiais para construção a seco, acabamentos, pisos e iluminação.",
   };
 

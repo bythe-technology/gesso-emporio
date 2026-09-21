@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { MaterialCard } from "@/components/material-card";
 import { categories } from "@/lib/site-data";
@@ -16,6 +17,8 @@ export default function MaterialsPage() {
   return (
     <>
       <section className="page-hero">
+        <Image className="page-hero-background" src="/images/materiais-drywall.webp" alt="Materiais para drywall e construção a seco" fill priority sizes="100vw" />
+        <span className="page-hero-shade" aria-hidden="true" />
         <div className="container page-hero-inner">
           <span className="eyebrow"><span /> Materiais</span>
           <h1>O projeto inteiro<br /><em>em um só lugar.</em></h1>
@@ -36,3 +39,4 @@ export default function MaterialsPage() {
     </>
   );
 }
+
