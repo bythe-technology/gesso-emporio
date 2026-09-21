@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { MaterialCard } from "@/components/material-card";
 import { categories } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/social-icons";
 
 export const metadata: Metadata = {
   title: "Materiais",
   description: "Conheça as linhas de forros, divisórias, pisos, iluminação, acabamentos, ferramentas, drywall e steel frame da Gesso Empório.",
+  alternates: { canonical: "/materiais" },
 };
 
 export default function MaterialsPage() {
@@ -28,7 +30,7 @@ export default function MaterialsPage() {
       <section className="section compact-cta-section">
         <div className="container compact-cta">
           <div><span>Não encontrou o que procura?</span><h2>Envie sua lista para a equipe.</h2><p>Consultamos as opções disponíveis e ajudamos você a organizar o pedido.</p></div>
-          <a className="button button-light" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Falar no WhatsApp</a>
+          <a className="button button-light" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><WhatsAppIcon width={18} height={18} /> Falar no WhatsApp</a>
         </div>
       </section>
     </>

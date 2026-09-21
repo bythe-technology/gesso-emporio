@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Camera, Clock3, MapPin, MessageCircle } from "lucide-react";
+import { Clock3, MapPin } from "lucide-react";
 import { QuoteForm } from "@/components/quote-form";
 import { ADDRESS, INSTAGRAM_URL, MAPS_URL, PHONE_LABEL } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { InstagramIcon, WhatsAppIcon } from "@/components/social-icons";
 
-export const metadata: Metadata = { title: "Contato", description: "Fale com a Gesso Empório, solicite materiais pelo WhatsApp e encontre a loja em Registro/SP." };
+export const metadata: Metadata = { title: "Contato", description: "Fale com a Gesso Empório, solicite materiais pelo WhatsApp e encontre a loja em Registro/SP.", alternates: { canonical: "/contato" } };
 
 export default function ContactPage() {
   return (
@@ -15,9 +16,9 @@ export default function ContactPage() {
           <div className="contact-info">
             <span className="eyebrow eyebrow-dark"><span /> Contato e visita</span><h2>Escolha o canal mais fácil para você.</h2>
             <div className="contact-cards">
-              <a href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><span><MessageCircle /></span><div><small>WhatsApp</small><strong>{PHONE_LABEL}</strong></div></a>
+              <a href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><span><WhatsAppIcon /></span><div><small>WhatsApp</small><strong>{PHONE_LABEL}</strong></div></a>
               <a href={MAPS_URL} target="_blank" rel="noreferrer"><span><MapPin /></span><div><small>Endereço</small><strong>{ADDRESS}</strong></div></a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><span><Camera /></span><div><small>Instagram</small><strong>@gessoemporio</strong></div></a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer"><span><InstagramIcon /></span><div><small>Instagram</small><strong>@gessoemporio</strong></div></a>
             </div>
             <div className="opening-hours"><Clock3 /><div><strong>Horário de atendimento</strong><p>Segunda a sexta, das 7h30 às 18h<br />Sábado, das 7h30 às 13h<br />Domingo, fechado</p></div></div>
           </div>

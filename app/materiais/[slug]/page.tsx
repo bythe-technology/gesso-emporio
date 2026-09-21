@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, BadgeCheck, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories, getCategory } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/social-icons";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getCategory((await params).slug);
   if (!category) return {};
-  return { title: category.name, description: `${category.description} Consulte materiais e disponibilidade na Gesso Empório em Registro/SP.` };
+  return { title: category.name, description: `${category.description} Consulte materiais e disponibilidade na Gesso Empório em Registro/SP.`, alternates: { canonical: `/materiais/${category.slug}` } };
 }
 
 export default async function MaterialCategoryPage({ params }: Props) {
@@ -34,7 +35,7 @@ export default async function MaterialCategoryPage({ params }: Props) {
             <span className="eyebrow"><span /> {category.eyebrow}</span>
             <h1>{category.name}</h1>
             <p>{category.intro}</p>
-            <a className="button button-primary" href={buildWhatsAppUrl({ category: category.name })} target="_blank" rel="noreferrer"><MessageCircle size={18} /> Consultar no WhatsApp</a>
+            <a className="button button-primary" href={buildWhatsAppUrl({ category: category.name })} target="_blank" rel="noreferrer"><WhatsAppIcon width={18} height={18} /> Consultar no WhatsApp</a>
           </div>
           <div className={`category-art ${category.image ? "has-image" : ""}`}>
             {category.image ? <Image src={category.image} alt={category.imageAlt ?? category.name} fill loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 45vw" /> : <><Icon aria-hidden="true" /><span>{category.shortName}</span></>}

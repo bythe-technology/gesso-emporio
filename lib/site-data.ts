@@ -64,7 +64,7 @@ export const categories: MaterialCategory[] = [
     items: ["Vinílicos", "Laminados", "Carpete em placas Shaw", "Pisos para academia", "Deck WPC"],
     benefits: ["Opções para alto tráfego", "Conforto e fácil manutenção", "Alternativas para áreas internas e externas"],
     icon: Layers3,
-    image: "/images/piso-wpc.jpg",
+    image: "/images/deck-wpc.jpg",
     imageAlt: "Aplicação de deck WPC comercializado pela Gesso Empório",
   },
   {
@@ -110,6 +110,8 @@ export const categories: MaterialCategory[] = [
     items: ["Gesso", "Placas de drywall", "Massas", "Perfis", "Complementos de instalação"],
     benefits: ["Soluções para diferentes etapas da obra", "Materiais para sistemas completos", "Atendimento para conferir a sua lista"],
     icon: BrickWall,
+    image: "/images/placa-performa.jpg",
+    imageAlt: "Placa Performa para ambientes de alto tráfego, disponível na Gesso Empório",
   },
   {
     slug: "steel-frame",
@@ -121,7 +123,7 @@ export const categories: MaterialCategory[] = [
     items: ["Perfis estruturais", "Placas", "Fixadores", "Componentes para fechamento", "Acessórios"],
     benefits: ["Sistema construtivo industrializado", "Rapidez na execução", "Uso eficiente de materiais"],
     icon: Blocks,
-    image: "/images/steel-frame.jpg",
+    image: "/images/light-steel-frame.jpg",
     imageAlt: "Estrutura em steel frame, material comercializado pela Gesso Empório",
   },
 ];

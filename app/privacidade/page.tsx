@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Política de privacidade", robots: { index: true, follow: true } };
+export const metadata: Metadata = { title: "Política de privacidade", robots: { index: true, follow: true }, alternates: { canonical: "/privacidade" } };
 
 export default function PrivacyPage() {
   return (

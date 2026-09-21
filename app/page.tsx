@@ -1,9 +1,13 @@
-import { ArrowRight, BadgeCheck, MapPin, MessageCircle, PackageCheck, Ruler, Star } from "lucide-react";
+import { ArrowRight, BadgeCheck, MapPin, PackageCheck, Star, Truck } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { MaterialCard } from "@/components/material-card";
 import { ADDRESS, categories, MAPS_URL, testimonials } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/social-icons";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function HomePage() {
   return (
@@ -16,7 +20,7 @@ export default function HomePage() {
             <p className="hero-lead">Materiais para construir, reformar e transformar ambientes, com variedade e orientação para você comprar melhor.</p>
             <div className="hero-actions">
               <a className="button button-primary" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer">
-                <MessageCircle size={19} /> Falar no WhatsApp
+                <WhatsAppIcon width={19} height={19} /> Falar no WhatsApp
               </a>
               <Link className="text-link" href="/materiais">Ver todos os materiais <ArrowRight size={18} /></Link>
             </div>
@@ -28,11 +32,11 @@ export default function HomePage() {
 
           <div className="hero-visual">
             <div className="hero-image-wrap">
-              <Image src="/images/loja-equipe-tratada.png" alt="Atendimento e materiais na loja Gesso Empório" fill loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 50vw" />
+              <Image src="/images/showroom-materiais.png" alt="Showroom com materiais para construção a seco, pisos, iluminação e acabamentos" fill loading="eager" fetchPriority="high" sizes="(max-width: 900px) 100vw, 50vw" />
             </div>
             <div className="hero-float-card">
               <span className="float-icon"><PackageCheck /></span>
-              <div><strong>Lista de materiais?</strong><small>A equipe ajuda você a conferir.</small></div>
+              <div><strong>Do piso ao teto</strong><small>Variedade para completar sua lista.</small></div>
             </div>
             <div className="hero-orange-mark" aria-hidden="true" />
           </div>
@@ -60,11 +64,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section product-showcase-section">
+        <div className="container">
+          <div className="section-heading split-heading">
+            <div><span className="eyebrow eyebrow-dark"><span /> Destaques da loja</span><h2>Materiais que fazem a obra avançar.</h2></div>
+            <p>Conheça algumas das linhas divulgadas pela Gesso Empório. Consulte modelos, medidas e disponibilidade pelo WhatsApp.</p>
+          </div>
+          <div className="product-showcase-grid">
+            <Link className="showcase-card showcase-card-wide" href="/materiais/gesso-e-drywall">
+              <Image src="/images/placa-performa.jpg" alt="Placa Performa para drywall de alta resistência" fill sizes="(max-width: 760px) 100vw, 55vw" />
+              <span className="showcase-overlay"><small>Gesso e drywall</small><strong>Placas para diferentes exigências</strong><em>Conhecer linha <ArrowRight /></em></span>
+            </Link>
+            <Link className="showcase-card" href="/materiais/pisos-e-decks">
+              <Image src="/images/deck-wpc.jpg" alt="Deck WPC para áreas externas" fill sizes="(max-width: 760px) 100vw, 28vw" />
+              <span className="showcase-overlay"><small>Pisos e decks</small><strong>Deck WPC</strong><em>Conhecer linha <ArrowRight /></em></span>
+            </Link>
+            <Link className="showcase-card" href="/materiais/steel-frame">
+              <Image src="/images/light-steel-frame.jpg" alt="Estrutura de light steel framing" fill sizes="(max-width: 760px) 100vw, 28vw" />
+              <span className="showcase-overlay"><small>Construção a seco</small><strong>Light steel framing</strong><em>Conhecer linha <ArrowRight /></em></span>
+            </Link>
+          </div>
+          <p className="image-disclaimer">Imagens de produtos e aplicações ilustrativas. A Gesso Empório comercializa os materiais e não executa instalação.</p>
+        </div>
+      </section>
+
       <section className="section service-section">
         <div className="container service-grid">
           <div className="service-visual">
-            <Image src="/images/loja-equipe-tratada.png" alt="Equipe da Gesso Empório em Registro" fill sizes="(max-width: 900px) 100vw, 45vw" />
-            <div className="service-label"><Ruler /><span>Orientação para comprar o material certo</span></div>
+            <Image src="/images/caminhao-gesso-emporio.png" alt="Caminhão da Gesso Empório para atendimento no Vale do Ribeira" fill sizes="(max-width: 900px) 100vw, 45vw" />
+            <div className="service-label"><Truck /><span>Atendimento em todo o Vale do Ribeira</span></div>
           </div>
           <div className="service-copy">
             <span className="eyebrow"><span /> Atendimento de verdade</span>
@@ -112,7 +140,7 @@ export default function HomePage() {
       <section className="closing-cta">
         <div className="container closing-inner">
           <div><span className="eyebrow"><span /> Seu projeto começa aqui</span><h2>Envie sua lista e consulte os materiais.</h2></div>
-          <a className="button button-light" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><MessageCircle size={19} /> Chamar no WhatsApp</a>
+          <a className="button button-light" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer"><WhatsAppIcon width={19} height={19} /> Chamar no WhatsApp</a>
         </div>
       </section>
     </>

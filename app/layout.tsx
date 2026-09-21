@@ -12,14 +12,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Gesso Empório | Materiais para construção a seco em Registro/SP", template: "%s | Gesso Empório" },
   description: "Materiais para drywall, forros, divisórias, pisos, iluminação, acabamentos e steel frame em Registro/SP. Atendimento para todo o Vale do Ribeira.",
+  applicationName: "Gesso Empório",
+  category: "Construção e materiais",
+  keywords: ["drywall Registro SP", "gesso Registro", "forro PVC Vale do Ribeira", "steel frame", "piso vinílico", "materiais construção a seco"],
+  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
     locale: "pt_BR",
     siteName: "Gesso Empório",
     title: "Gesso Empório — O shopping da construção a seco",
     description: "Variedade, orientação e materiais do piso ao teto em Registro/SP.",
-    images: [{ url: "/images/loja-equipe-tratada.png", width: 1536, height: 960, alt: "Equipe e loja Gesso Empório" }],
+    images: [{ url: "/images/showroom-materiais.png", width: 1536, height: 960, alt: "Showroom de materiais para construção a seco" }],
   },
+  twitter: { card: "summary_large_image", title: "Gesso Empório — O shopping da construção a seco", description: "Materiais do piso ao teto em Registro/SP.", images: ["/images/showroom-materiais.png"] },
   robots: { index: true, follow: true },
 };
 
@@ -31,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     url: SITE_URL,
     telephone: PHONE_LABEL,
     image: `${SITE_URL}/images/logo-gesso-emporio.png`,
+    logo: `${SITE_URL}/images/logo-gesso-emporio.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Rua São Nicolau, 25 — Jardim São Nicolau",
@@ -39,6 +46,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       addressCountry: "BR",
     },
     areaServed: "Vale do Ribeira",
+    sameAs: ["https://www.instagram.com/gessoemporio/"],
+    openingHoursSpecification: [
+      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "07:30", closes: "18:00" },
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "07:30", closes: "13:00" },
+    ],
+    priceRange: "$$",
     description: "Loja de materiais para construção a seco, acabamentos, pisos e iluminação.",
   };
 

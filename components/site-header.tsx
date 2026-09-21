@@ -1,11 +1,12 @@
 "use client";
 
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/social-icons";
 
 const links = [
   { href: "/", label: "Início" },
@@ -40,7 +41,7 @@ export function SiteHeader() {
         </nav>
 
         <a className="header-quote" href={buildWhatsAppUrl()} target="_blank" rel="noreferrer">
-          <MessageCircle size={18} aria-hidden="true" />
+          <WhatsAppIcon width={19} height={19} />
           Pedir orçamento
         </a>
 
