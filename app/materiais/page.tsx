@@ -6,16 +6,24 @@ import { MaterialCard } from "@/components/material-card";
 import { categories } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
+import { StructuredData } from "@/components/structured-data";
+import { createBreadcrumbSchema, createPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site-data";
 
-export const metadata: Metadata = {
-  title: "Materiais",
+export const metadata: Metadata = createPageMetadata({
+  title: "Materiais para construção, reforma e acabamento",
   description: "Conheça as linhas de forros, divisórias, pisos, iluminação, acabamentos, ferramentas, drywall e steel frame da Gesso Empório.",
-  alternates: { canonical: "/materiais" },
-};
+  path: "/materiais",
+  keywords: ["materiais drywall", "forros e divisórias", "pisos e decks", "steel frame", "materiais de construção Registro SP"],
+});
 
 export default function MaterialsPage() {
   return (
     <>
+      <StructuredData data={[
+        createBreadcrumbSchema([{ name: "Início", path: "/" }, { name: "Materiais", path: "/materiais" }]),
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Materiais da Gesso Empório", url: `${SITE_URL}/materiais`, mainEntity: { "@type": "ItemList", itemListElement: categories.map((category, index) => ({ "@type": "ListItem", position: index + 1, name: category.name, url: `${SITE_URL}/materiais/${category.slug}` })) } },
+      ]} />
       <section className="page-hero">
         <Image className="page-hero-background" src="/images/materiais-drywall.webp" alt="Materiais para drywall e construção a seco" fill priority sizes="100vw" />
         <span className="page-hero-shade" aria-hidden="true" />

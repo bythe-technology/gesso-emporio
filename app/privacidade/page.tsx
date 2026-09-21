@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Política de privacidade", robots: { index: true, follow: true }, alternates: { canonical: "/privacidade" } };
+export const metadata: Metadata = { title: "Política de privacidade", description: "Política de privacidade do site da Gesso Empório.", robots: { index: false, follow: true }, alternates: { canonical: "/privacidade" } };
 
 export default function PrivacyPage() {
   return (

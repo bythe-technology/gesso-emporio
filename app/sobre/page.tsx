@@ -4,12 +4,15 @@ import Image from "next/image";
 import { ADDRESS, MAPS_EMBED_URL, MAPS_URL } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
+import { StructuredData } from "@/components/structured-data";
+import { createBreadcrumbSchema, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "A loja", description: "Conheça a Gesso Empório, loja de materiais para construção a seco, acabamentos e iluminação em Registro/SP.", alternates: { canonical: "/sobre" } };
+export const metadata: Metadata = createPageMetadata({ title: "A loja de construção a seco em Registro", description: "Conheça a Gesso Empório: materiais para construção a seco, drywall, acabamentos, pisos e iluminação em Registro e no Vale do Ribeira.", path: "/sobre", keywords: ["Gesso Empório Registro", "loja construção a seco Registro", "drywall Vale do Ribeira"] });
 
 export default function AboutPage() {
   return (
     <>
+      <StructuredData data={createBreadcrumbSchema([{ name: "Início", path: "/" }, { name: "A loja", path: "/sobre" }])} />
       <section className="page-hero about-hero"><Image className="page-hero-background" src="/images/fachada-gesso-emporio-tratada.webp" alt="Fachada da Gesso Empório em Registro" fill priority sizes="100vw" /><span className="page-hero-shade" aria-hidden="true" /><div className="container page-hero-inner"><span className="eyebrow"><span /> A Gesso Empório</span><h1>Uma loja feita para<br /><em>resolver a sua obra.</em></h1><p>Variedade, orientação e atendimento próximo para profissionais e consumidores de Registro e de todo o Vale do Ribeira.</p></div></section>
       <section className="section story-section">
         <div className="container story-grid">

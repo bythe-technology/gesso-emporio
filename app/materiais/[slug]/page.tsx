@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import { categories, getCategory } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
+import { StructuredData } from "@/components/structured-data";
+import { createBreadcrumbSchema, createPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site-data";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -16,7 +19,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getCategory((await params).slug);
   if (!category) return {};
-  return { title: category.name, description: `${category.description} Consulte materiais e disponibilidade na Gesso Empório em Registro/SP.`, alternates: { canonical: `/materiais/${category.slug}` } };
+  return createPageMetadata({
+    title: `${category.name} em Registro/SP`,
+    description: `${category.description} Consulte opções, medidas e disponibilidade na Gesso Empório em Registro/SP.`,
+    path: `/materiais/${category.slug}`,
+    keywords: [category.name, `${category.name} Registro SP`, `${category.name} Vale do Ribeira`, ...category.items.slice(0, 4)],
+    image: category.image,
+  });
 }
 
 export default async function MaterialCategoryPage({ params }: Props) {
@@ -27,6 +36,10 @@ export default async function MaterialCategoryPage({ params }: Props) {
 
   return (
     <>
+      <StructuredData data={[
+        createBreadcrumbSchema([{ name: "Início", path: "/" }, { name: "Materiais", path: "/materiais" }, { name: category.name, path: `/materiais/${category.slug}` }]),
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: `${category.name} em Registro/SP`, url: `${SITE_URL}/materiais/${category.slug}`, description: category.description, isPartOf: { "@id": `${SITE_URL}/#website` }, about: category.items.map((item) => ({ "@type": "Thing", name: item })) },
+      ]} />
       <section className="category-hero">
         <Image className="category-hero-background" src={category.image} alt={category.imageAlt} fill loading="eager" fetchPriority="high" sizes="100vw" />
         <span className="category-hero-shade" aria-hidden="true" />

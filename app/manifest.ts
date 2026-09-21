@@ -7,6 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "O shopping da construção a seco em Registro/SP.",
     start_url: "/",
     display: "standalone",
+    scope: "/",
+    orientation: "portrait-primary",
     background_color: "#082c4b",
     theme_color: "#082c4b",
     lang: "pt-BR",

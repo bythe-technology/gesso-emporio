@@ -5,12 +5,15 @@ import { QuoteForm } from "@/components/quote-form";
 import { ADDRESS, INSTAGRAM_URL, MAPS_EMBED_URL, MAPS_URL, PHONE_LABEL } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { InstagramIcon, WhatsAppIcon } from "@/components/social-icons";
+import { StructuredData } from "@/components/structured-data";
+import { createBreadcrumbSchema, createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Contato", description: "Fale com a Gesso Empório, solicite materiais pelo WhatsApp e encontre a loja em Registro/SP.", alternates: { canonical: "/contato" } };
+export const metadata: Metadata = createPageMetadata({ title: "Contato, WhatsApp e localização", description: "Fale com a Gesso Empório pelo WhatsApp, envie sua lista de materiais e encontre nossa loja de construção a seco em Registro/SP.", path: "/contato", keywords: ["contato Gesso Empório", "loja de drywall Registro", "materiais construção Registro endereço"] });
 
 export default function ContactPage() {
   return (
     <>
+      <StructuredData data={createBreadcrumbSchema([{ name: "Início", path: "/" }, { name: "Contato", path: "/contato" }])} />
       <section className="page-hero contact-hero"><Image className="page-hero-background" src="/images/materiais-iluminacao-ferramentas.webp" alt="Materiais e ferramentas disponíveis na Gesso Empório" fill priority sizes="100vw" /><span className="page-hero-shade" aria-hidden="true" /><div className="container page-hero-inner"><span className="eyebrow"><span /> Fale com a equipe</span><h1>Conte o que<br /><em>sua obra precisa.</em></h1><p>Envie sua lista, tire dúvidas sobre as linhas e consulte a disponibilidade dos materiais.</p></div></section>
       <section className="section contact-section">
         <div className="container contact-grid">

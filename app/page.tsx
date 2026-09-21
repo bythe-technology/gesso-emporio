@@ -1,5 +1,4 @@
 import { ArrowRight, BadgeCheck, MapPin } from "lucide-react";
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { MaterialCard } from "@/components/material-card";
@@ -7,8 +6,14 @@ import { ADDRESS, categories, MAPS_EMBED_URL, MAPS_URL, testimonials } from "@/l
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata = createPageMetadata({
+  title: "Materiais para construção a seco em Registro/SP",
+  description: "Drywall, gesso, forros, divisórias, pisos, iluminação, acabamentos e steel frame em Registro/SP. Consulte a Gesso Empório.",
+  path: "/",
+  keywords: ["gesso em Registro SP", "drywall Registro SP", "material para construção a seco", "forro PVC Registro", "steel frame Vale do Ribeira"],
+});
 
 export default function HomePage() {
   return (
