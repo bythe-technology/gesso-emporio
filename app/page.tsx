@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeCheck, MapPin, Star } from "lucide-react";
+import { ArrowRight, BadgeCheck, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +6,7 @@ import { MaterialCard } from "@/components/material-card";
 import { ADDRESS, categories, MAPS_EMBED_URL, MAPS_URL, testimonials } from "@/lib/site-data";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
+import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -106,15 +107,7 @@ export default function HomePage() {
       <section className="section testimonials-section">
         <div className="container">
           <div className="section-heading centered-heading" data-reveal="up"><span className="eyebrow eyebrow-dark"><span /> Quem compra, recomenda</span><h2>Atendimento que faz diferença.</h2><a className="google-rating" href={MAPS_URL} target="_blank" rel="noreferrer"><strong>4,7</strong><span className="stars" aria-hidden="true">★★★★★</span><span>26 avaliações no Google</span></a></div>
-          <div className="testimonials-grid" data-reveal="stagger">
-            {testimonials.map((testimonial) => (
-              <blockquote key={testimonial.author} className="testimonial-card">
-                <div className="stars" aria-label="5 estrelas">{Array.from({ length: 5 }).map((_, index) => <Star key={index} size={18} fill="currentColor" />)}</div>
-                <p>“{testimonial.quote}”</p>
-                <footer><strong>{testimonial.author}</strong><span>{testimonial.source}</span></footer>
-              </blockquote>
-            ))}
-          </div>
+          <TestimonialsCarousel testimonials={testimonials} />
         </div>
       </section>
 
