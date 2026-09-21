@@ -13,7 +13,7 @@ import {
 export const SITE_URL = "https://gesso-emporio.vercel.app";
 export const WHATSAPP_NUMBER = "5513996103288";
 export const PHONE_LABEL = "(13) 99610-3288";
-export const ADDRESS = "Rua São Nicolau, 218 — Vila São Nicolau, Registro/SP";
+export const ADDRESS = "Rua São Nicolau, 25 — Jardim São Nicolau, Registro/SP";
 export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Gesso+Emp%C3%B3rio+Registro+SP";
 export const MAPS_EMBED_URL = "https://www.google.com/maps?q=Gesso+Emp%C3%B3rio%2C+Registro%2C+SP&output=embed";
 export const INSTAGRAM_URL = "https://www.instagram.com/gessoemporio/";
@@ -30,6 +30,8 @@ export type MaterialCategory = {
   icon: LucideIcon;
   image: string;
   imageAlt: string;
+  productImageUrl: string;
+  productImageAlt: string;
 };
 
 export const categories: MaterialCategory[] = [
@@ -45,6 +47,8 @@ export const categories: MaterialCategory[] = [
     icon: PanelsTopLeft,
     image: "/images/materiais-forros-divisorias.webp",
     imageAlt: "Amostras de forros em PVC, mineral, acústico e componentes para acabamento",
+    productImageUrl: "https://www.grsaopaulo.com.br/5980-tm_thickbox_default/forro-pvc-polgemini-branco-fl-5m-10m-8mm.jpg",
+    productImageAlt: "Régua de forro de PVC branco",
   },
   {
     slug: "divisorias",
@@ -58,6 +62,8 @@ export const categories: MaterialCategory[] = [
     icon: Rows3,
     image: "/images/materiais-forros-divisorias.webp",
     imageAlt: "Painéis, perfis e materiais para divisórias comercializados pela Gesso Empório",
+    productImageUrl: "https://images.tcdn.com.br/img/img_prod/1208320/painel_para_divisoria_eucatex_eucaplac_uv_madeirado_maple_lyon_1200_mm_x_2110_mm_x_35_mm_125_1_51b16933f45a7e92ac3cbddc89fd4404.jpg",
+    productImageAlt: "Painel Eucatex para divisória naval",
   },
   {
     slug: "pisos-e-decks",
@@ -71,6 +77,8 @@ export const categories: MaterialCategory[] = [
     icon: Layers3,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Amostras de pisos vinílicos, laminados, WPC e revestimentos",
+    productImageUrl: "https://images.squarespace-cdn.com/content/v1/67010775cf01f078fe4389f3/ff4ec21d-7024-4d86-bc37-880e11618720/86010e.png",
+    productImageAlt: "Régua de piso vinílico amadeirado",
   },
   {
     slug: "iluminacao",
@@ -84,6 +92,8 @@ export const categories: MaterialCategory[] = [
     icon: Lightbulb,
     image: "/images/materiais-iluminacao-ferramentas.webp",
     imageAlt: "Spots, plafons, fitas de LED, pendentes e refletores em exposição",
+    productImageUrl: "https://images.tcdn.com.br/img/img_prod/1392468/plafon_sobrepor_led_24w_6500k_elgin_4319_1_f6c31e782ec1c2174a3b551aa7636a62.png",
+    productImageAlt: "Plafon quadrado de LED para sobrepor",
   },
   {
     slug: "revestimentos-e-acabamentos",
@@ -97,6 +107,8 @@ export const categories: MaterialCategory[] = [
     icon: PaintRoller,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Ripados, papéis adesivos e amostras de revestimentos e acabamentos",
+    productImageUrl: "https://joli.vtexassets.com/arquivos/ids/670472/Painel_Ripado_Em_Wpc_22cm_X_168cm_X_290cm_Teca_mbar_Tiklar_104565501png.png?v=639078003895070000",
+    productImageAlt: "Painel ripado em WPC com acabamento amadeirado",
   },
   {
     slug: "ferramentas-e-acessorios",
@@ -110,6 +122,8 @@ export const categories: MaterialCategory[] = [
     icon: Hammer,
     image: "/images/materiais-iluminacao-ferramentas.webp",
     imageAlt: "Ferramentas, acessórios e itens de instalação para construção a seco",
+    productImageUrl: "https://images.tcdn.com.br/img/img_prod/469103/desempenadeira_aco_inox_lisa_40cm_para_massa_corrida_vonder_159392_4_573f9ed7de4d78d084bb112d53ffec69.png",
+    productImageAlt: "Desempenadeira Vonder para acabamento com massa corrida",
   },
   {
     slug: "gesso-e-drywall",
@@ -123,6 +137,8 @@ export const categories: MaterialCategory[] = [
     icon: BrickWall,
     image: "/images/materiais-drywall.webp",
     imageAlt: "Placas de drywall, perfis metálicos, massas e componentes para construção a seco",
+    productImageUrl: "https://cdn.zyrosite.com/cdn-ecommerce/store_01HCZ0QH9WYSZGYBNA5B84QXNJ%2Fassets%2F1701805993050-chapa-drywall-verde.jpg",
+    productImageAlt: "Chapa de drywall verde resistente à umidade",
   },
   {
     slug: "steel-frame",
@@ -136,6 +152,8 @@ export const categories: MaterialCategory[] = [
     icon: Blocks,
     image: "/images/light-steel-frame.jpg",
     imageAlt: "Estrutura em steel frame, material comercializado pela Gesso Empório",
+    productImageUrl: "https://cdn.dooca.store/158832/products/montante-de-steel-frame.png?v=1747669500&webp=0",
+    productImageAlt: "Montante galvanizado para sistema steel frame",
   },
 ];
 

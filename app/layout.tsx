@@ -44,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     logo: `${SITE_URL}/images/logo-gesso-emporio.png`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Rua São Nicolau, 218 — Vila São Nicolau",
+      streetAddress: "Rua São Nicolau, 25 — Jardim São Nicolau",
       addressLocality: "Registro",
       addressRegion: "SP",
       addressCountry: "BR",

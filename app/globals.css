@@ -82,17 +82,18 @@ img { max-width: 100%; }
 .split-heading > div { max-width: 670px; }
 .split-heading > p { max-width: 410px; margin: 0 0 5px; color: var(--muted); line-height: 1.7; font-size: .94rem; }
 .materials-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-.material-card { min-height: 390px; padding: 24px; display: flex; flex-direction: column; position: relative; overflow: hidden; color: white; background: var(--blue-deep); border: 1px solid rgba(8,44,75,.12); border-radius: 18px; box-shadow: 0 14px 35px rgba(8,44,75,.1); transition: transform .25s ease, box-shadow .25s ease; }
-.material-card-image { object-fit: cover; transition: transform .55s ease; }
-.material-card-shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(3,22,39,.96) 0%, rgba(4,30,52,.62) 50%, rgba(4,30,52,.18) 100%); }
-.material-card:hover { transform: translateY(-6px); box-shadow: 0 24px 55px rgba(8,44,75,.2); }
-.material-card:hover .material-card-image { transform: scale(1.055); }
-.material-index { position: relative; z-index: 2; color: #f3c08b; font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
-.material-icon { width: 48px; height: 48px; margin: 28px 0 auto; display: grid; place-items: center; position: relative; z-index: 2; color: white; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(10px); border-radius: 14px; }
-.material-card-copy { position: relative; z-index: 2; margin-top: 45px; }
-.material-card h3 { margin: 0; color: white; font-size: 1.22rem; letter-spacing: -.025em; }
-.material-card p { margin: 10px 0 18px; color: #dce7f0; font-size: .78rem; line-height: 1.6; }
-.material-link { display: inline-flex; align-items: center; gap: 7px; position: relative; z-index: 2; color: #ffbd78; font-size: .76rem; font-weight: 800; }
+.material-card { min-height: 440px; display: flex; flex-direction: column; position: relative; overflow: hidden; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 14px 35px rgba(8,44,75,.08); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.material-product-shot { height: 225px; padding: 25px; position: relative; display: grid; place-items: center; overflow: hidden; background: #fff; border-bottom: 1px solid #edf1f5; }
+.material-product-shot img { width: 100%; height: 100%; display: block; object-fit: contain; transition: transform .45s ease; }
+.material-card:hover { transform: translateY(-6px); border-color: rgba(36,85,154,.28); box-shadow: 0 24px 55px rgba(8,44,75,.16); }
+.material-card:hover .material-product-shot img { transform: scale(1.055); }
+.material-index { position: absolute; z-index: 2; left: 16px; top: 16px; padding: 6px 8px; color: var(--blue-deep); background: #edf4fb; border-radius: 8px; font-size: .66rem; font-weight: 850; letter-spacing: .1em; }
+.material-icon { width: 42px; height: 42px; position: absolute; z-index: 2; right: 16px; top: 16px; display: grid; place-items: center; color: white; background: var(--blue); border-radius: 12px; box-shadow: 0 8px 20px rgba(8,44,75,.2); }
+.material-icon svg { width: 21px; }
+.material-card-copy { padding: 23px 23px 0; }
+.material-card h3 { margin: 0; color: var(--blue-deep); font-size: 1.16rem; letter-spacing: -.025em; }
+.material-card p { margin: 9px 0 16px; color: var(--muted); font-size: .76rem; line-height: 1.6; }
+.material-link { margin: auto 23px 22px; display: inline-flex; align-items: center; gap: 7px; color: var(--orange-dark); font-size: .75rem; font-weight: 850; }
 .center-action { display: flex; justify-content: center; margin-top: 42px; }
 
 .product-showcase-section { background: white; }
