@@ -15,7 +15,11 @@ export const metadata: Metadata = {
   applicationName: "Gesso Empório",
   category: "Construção e materiais",
   keywords: ["drywall Registro SP", "gesso Registro", "forro PVC Vale do Ribeira", "steel frame", "piso vinílico", "materiais construção a seco"],
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
+  icons: {
+    icon: [{ url: "/favicon-32.png", type: "image/png", sizes: "32x32" }],
+    shortcut: "/favicon-32.png",
+    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   manifest: "/manifest.webmanifest",
   openGraph: {
     type: "website",
