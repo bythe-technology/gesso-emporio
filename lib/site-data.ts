@@ -47,8 +47,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: PanelsTopLeft,
     image: "/images/materiais-forros-divisorias.webp",
     imageAlt: "Amostras de forros em PVC, mineral, acústico e componentes para acabamento",
-    productImageUrl: "https://www.grsaopaulo.com.br/5980-tm_thickbox_default/forro-pvc-polgemini-branco-fl-5m-10m-8mm.jpg",
-    productImageAlt: "Régua de forro de PVC branco",
+    productImageUrl: "/images/catalogo-forros.webp",
+    productImageAlt: "Forros de PVC, placas minerais e perfil de sustentação em fundo claro",
   },
   {
     slug: "divisorias",
@@ -62,8 +62,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: Rows3,
     image: "/images/materiais-forros-divisorias.webp",
     imageAlt: "Painéis, perfis e materiais para divisórias comercializados pela Gesso Empório",
-    productImageUrl: "/images/produto-divisorias-cliente.webp",
-    productImageAlt: "Divisória interna com painéis brancos e perfis aparentes",
+    productImageUrl: "/images/catalogo-divisorias.webp",
+    productImageAlt: "Divisória modular branca com perfis de alumínio e porta integrada",
   },
   {
     slug: "pisos-e-decks",
@@ -77,8 +77,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: Layers3,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Amostras de pisos vinílicos, laminados, WPC e revestimentos",
-    productImageUrl: "/images/produto-pisos-cliente.webp",
-    productImageAlt: "Amostras de pisos laminados e vinílicos com acabamento amadeirado",
+    productImageUrl: "/images/catalogo-pisos-decks.webp",
+    productImageAlt: "Amostras de pisos laminados e vinílicos em diferentes tons de madeira",
   },
   {
     slug: "iluminacao",
@@ -92,8 +92,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: Lightbulb,
     image: "/images/materiais-iluminacao-ferramentas.webp",
     imageAlt: "Spots, plafons, fitas de LED, pendentes e refletores em exposição",
-    productImageUrl: "https://images.tcdn.com.br/img/img_prod/1392468/plafon_sobrepor_led_24w_6500k_elgin_4319_1_f6c31e782ec1c2174a3b551aa7636a62.png",
-    productImageAlt: "Plafon quadrado de LED para sobrepor",
+    productImageUrl: "/images/catalogo-iluminacao.webp",
+    productImageAlt: "Painel, plafon e spots de LED brancos em fundo claro",
   },
   {
     slug: "revestimentos-e-acabamentos",
@@ -107,7 +107,7 @@ const unorderedCategories: MaterialCategory[] = [
     icon: PaintRoller,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Ripados, papéis adesivos e amostras de revestimentos e acabamentos",
-    productImageUrl: "/images/produto-acabamentos-cliente.webp",
+    productImageUrl: "/images/catalogo-acabamentos.webp",
     productImageAlt: "Painéis ripados em três tons de madeira",
   },
   {
@@ -122,8 +122,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: Hammer,
     image: "/images/materiais-iluminacao-ferramentas.webp",
     imageAlt: "Ferramentas, acessórios e itens de instalação para construção a seco",
-    productImageUrl: "/images/produto-ferramentas-cliente.webp",
-    productImageAlt: "Kit de ferramentas elétricas DeWalt com baterias e bolsa",
+    productImageUrl: "/images/catalogo-ferramentas.webp",
+    productImageAlt: "Kit profissional de ferramentas elétricas com baterias, carregador e bolsa",
   },
   {
     slug: "gesso-e-drywall",
@@ -137,7 +137,7 @@ const unorderedCategories: MaterialCategory[] = [
     icon: BrickWall,
     image: "/images/materiais-drywall.webp",
     imageAlt: "Placas de drywall, perfis metálicos, massas e componentes para construção a seco",
-    productImageUrl: "/images/produto-drywall-cliente.webp",
+    productImageUrl: "/images/catalogo-gesso-drywall.webp",
     productImageAlt: "Placas de drywall branca, verde e rosa para diferentes aplicações",
   },
   {
@@ -152,8 +152,8 @@ const unorderedCategories: MaterialCategory[] = [
     icon: Blocks,
     image: "/images/light-steel-frame.jpg",
     imageAlt: "Estrutura em steel frame, material comercializado pela Gesso Empório",
-    productImageUrl: "/images/produto-steel-frame-cliente.webp",
-    productImageAlt: "Casa residencial com estrutura completa em steel frame aparente",
+    productImageUrl: "/images/catalogo-steel-frame.webp",
+    productImageAlt: "Estrutura residencial completa em light steel frame galvanizado",
   },
 ];
 
