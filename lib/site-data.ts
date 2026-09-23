@@ -34,7 +34,7 @@ export type MaterialCategory = {
   productImageAlt: string;
 };
 
-export const categories: MaterialCategory[] = [
+const unorderedCategories: MaterialCategory[] = [
   {
     slug: "forros",
     name: "Forros",
@@ -62,8 +62,8 @@ export const categories: MaterialCategory[] = [
     icon: Rows3,
     image: "/images/materiais-forros-divisorias.webp",
     imageAlt: "Painéis, perfis e materiais para divisórias comercializados pela Gesso Empório",
-    productImageUrl: "https://images.tcdn.com.br/img/img_prod/1208320/painel_para_divisoria_eucatex_eucaplac_uv_madeirado_maple_lyon_1200_mm_x_2110_mm_x_35_mm_125_1_51b16933f45a7e92ac3cbddc89fd4404.jpg",
-    productImageAlt: "Painel Eucatex para divisória naval",
+    productImageUrl: "/images/produto-divisorias-cliente.webp",
+    productImageAlt: "Divisória interna com painéis brancos e perfis aparentes",
   },
   {
     slug: "pisos-e-decks",
@@ -77,8 +77,8 @@ export const categories: MaterialCategory[] = [
     icon: Layers3,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Amostras de pisos vinílicos, laminados, WPC e revestimentos",
-    productImageUrl: "https://images.squarespace-cdn.com/content/v1/67010775cf01f078fe4389f3/ff4ec21d-7024-4d86-bc37-880e11618720/86010e.png",
-    productImageAlt: "Régua de piso vinílico amadeirado",
+    productImageUrl: "/images/produto-pisos-cliente.webp",
+    productImageAlt: "Amostras de pisos laminados e vinílicos com acabamento amadeirado",
   },
   {
     slug: "iluminacao",
@@ -107,8 +107,8 @@ export const categories: MaterialCategory[] = [
     icon: PaintRoller,
     image: "/images/materiais-pisos-acabamentos.webp",
     imageAlt: "Ripados, papéis adesivos e amostras de revestimentos e acabamentos",
-    productImageUrl: "https://joli.vtexassets.com/arquivos/ids/670472/Painel_Ripado_Em_Wpc_22cm_X_168cm_X_290cm_Teca_mbar_Tiklar_104565501png.png?v=639078003895070000",
-    productImageAlt: "Painel ripado em WPC com acabamento amadeirado",
+    productImageUrl: "/images/produto-acabamentos-cliente.webp",
+    productImageAlt: "Painéis ripados em três tons de madeira",
   },
   {
     slug: "ferramentas-e-acessorios",
@@ -122,8 +122,8 @@ export const categories: MaterialCategory[] = [
     icon: Hammer,
     image: "/images/materiais-iluminacao-ferramentas.webp",
     imageAlt: "Ferramentas, acessórios e itens de instalação para construção a seco",
-    productImageUrl: "https://images.tcdn.com.br/img/img_prod/469103/desempenadeira_aco_inox_lisa_40cm_para_massa_corrida_vonder_159392_4_573f9ed7de4d78d084bb112d53ffec69.png",
-    productImageAlt: "Desempenadeira Vonder para acabamento com massa corrida",
+    productImageUrl: "/images/produto-ferramentas-cliente.webp",
+    productImageAlt: "Kit de ferramentas elétricas DeWalt com baterias e bolsa",
   },
   {
     slug: "gesso-e-drywall",
@@ -137,8 +137,8 @@ export const categories: MaterialCategory[] = [
     icon: BrickWall,
     image: "/images/materiais-drywall.webp",
     imageAlt: "Placas de drywall, perfis metálicos, massas e componentes para construção a seco",
-    productImageUrl: "https://cdn.zyrosite.com/cdn-ecommerce/store_01HCZ0QH9WYSZGYBNA5B84QXNJ%2Fassets%2F1701805993050-chapa-drywall-verde.jpg",
-    productImageAlt: "Chapa de drywall verde resistente à umidade",
+    productImageUrl: "/images/produto-drywall-cliente.webp",
+    productImageAlt: "Placas de drywall branca, verde e rosa para diferentes aplicações",
   },
   {
     slug: "steel-frame",
@@ -152,10 +152,14 @@ export const categories: MaterialCategory[] = [
     icon: Blocks,
     image: "/images/light-steel-frame.jpg",
     imageAlt: "Estrutura em steel frame, material comercializado pela Gesso Empório",
-    productImageUrl: "https://cdn.dooca.store/158832/products/montante-de-steel-frame.png?v=1747669500&webp=0",
-    productImageAlt: "Montante galvanizado para sistema steel frame",
+    productImageUrl: "/images/produto-steel-frame-cliente.webp",
+    productImageAlt: "Casa residencial com estrutura completa em steel frame aparente",
   },
 ];
+
+const categoryOrder = ["gesso-e-drywall", "steel-frame", "forros", "divisorias", "pisos-e-decks", "revestimentos-e-acabamentos", "iluminacao", "ferramentas-e-acessorios"];
+
+export const categories = [...unorderedCategories].sort((first, second) => categoryOrder.indexOf(first.slug) - categoryOrder.indexOf(second.slug));
 
 export const testimonials = [
   {

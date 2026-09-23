@@ -41,11 +41,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="trust-strip" aria-label="Diferenciais" data-reveal="fade">
-        <div className="container trust-grid">
-          <div><strong>8</strong><span>grandes categorias</span></div>
-          <div><strong>Do piso ao teto</strong><span>para completar a sua obra</span></div>
-          <div><strong>Atendimento próximo</strong><span>para escolher com segurança</span></div>
+      <section className="trust-strip" aria-label="O shopping da construção a seco" data-reveal="fade">
+        <span className="sr-only">O shopping da construção a seco</span>
+        <div className="brand-marquee" aria-hidden="true">
+          <div className="brand-marquee-track">
+            {[0, 1].map((group) => (
+              <div className="brand-marquee-group" key={group}>
+                {Array.from({ length: 4 }).map((_, index) => <span key={index}>O shopping da construção a seco <i>•</i></span>)}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
