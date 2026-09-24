@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { categories, MAPS_EMBED_URL, testimonials } from "../lib/site-data";
+import { getProductDetail, toProductSlug } from "../lib/product-details";
 
 test("every material category has a photographic asset and accessible description", () => {
   assert.equal(categories.length, 8);
@@ -31,4 +32,17 @@ test("publishes the verified Google review summary and map embed", () => {
   assert.ok(testimonials.length >= 6);
   assert.match(MAPS_EMBED_URL, /^https:\/\/www\.google\.com\/maps\?/);
   assert.match(MAPS_EMBED_URL, /output=embed$/);
+});
+
+test("every material item has a stable product route and detail page data", () => {
+  for (const category of categories) {
+    for (const item of category.items) {
+      const slug = toProductSlug(item);
+      const detail = getProductDetail(category, slug);
+      assert.ok(slug.length > 1);
+      assert.equal(detail?.name, item);
+      assert.ok((detail?.options.length ?? 0) >= 3);
+      assert.match(detail?.image ?? "", /^\/images\/.+\.(?:webp|jpg|png)$/);
+    }
+  }
 });

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, BadgeCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, BadgeCheck, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -9,6 +9,7 @@ import { WhatsAppIcon } from "@/components/social-icons";
 import { StructuredData } from "@/components/structured-data";
 import { createBreadcrumbSchema, createPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-data";
+import { toProductSlug } from "@/lib/product-details";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -58,7 +59,7 @@ export default async function MaterialCategoryPage({ params }: Props) {
       <section className="section category-details">
         <div className="container category-details-grid">
           <div><span className="eyebrow eyebrow-dark"><span /> Linhas disponíveis</span><h2>Encontre o material que combina com a sua necessidade.</h2><p>As opções podem variar em medidas, cores, modelos e estoque. Consulte nossa equipe antes de se deslocar.</p></div>
-          <div className="product-list">{category.items.map((item, index) => <div key={item}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></div>)}</div>
+          <div className="product-list">{category.items.map((item, index) => <Link key={item} href={`/materiais/${category.slug}/${toProductSlug(item)}`} target="_blank" rel="noopener noreferrer" aria-label={`Conhecer fotos e opções de ${item} em nova aba`}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item}</strong><small>Ver fotos e modelos</small><ExternalLink aria-hidden="true" /></Link>)}</div>
         </div>
       </section>
 
