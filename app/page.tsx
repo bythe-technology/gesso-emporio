@@ -7,6 +7,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/social-icons";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { createPageMetadata } from "@/lib/seo";
+import { featuredPromotions } from "@/lib/product-details";
 
 export const metadata = createPageMetadata({
   title: "Materiais para construção a seco em Registro/SP",
@@ -74,18 +75,10 @@ export default function HomePage() {
             <p>Conheça algumas das linhas divulgadas pela Gesso Empório. Consulte modelos, medidas e disponibilidade pelo WhatsApp.</p>
           </div>
           <div className="product-showcase-grid" data-reveal="stagger">
-            <Link className="showcase-card showcase-card-wide" href="/materiais/gesso-e-drywall">
-              <Image src="/images/materiais-drywall.webp" alt="Estoque de placas de drywall, perfis e massas para construção a seco" fill sizes="(max-width: 760px) 100vw, 55vw" />
-              <span className="showcase-overlay"><small>Gesso e drywall</small><strong>Placas, perfis e complementos</strong><em>Conhecer linha <ArrowRight /></em></span>
-            </Link>
-            <Link className="showcase-card" href="/materiais/pisos-e-decks">
-              <Image src="/images/materiais-pisos-acabamentos.webp" alt="Mostruário de pisos, revestimentos e deck WPC" fill sizes="(max-width: 760px) 100vw, 28vw" />
-              <span className="showcase-overlay"><small>Pisos e decks</small><strong>Acabamentos para cada ambiente</strong><em>Conhecer linha <ArrowRight /></em></span>
-            </Link>
-            <Link className="showcase-card" href="/materiais/steel-frame">
-              <Image src="/images/materiais-forros-divisorias.webp" alt="Sistemas de forros, divisórias e perfis para construção a seco" fill sizes="(max-width: 760px) 100vw, 28vw" />
-              <span className="showcase-overlay"><small>Construção a seco</small><strong>Forros, divisórias e estruturas</strong><em>Conhecer linha <ArrowRight /></em></span>
-            </Link>
+            {featuredPromotions.map((promotion) => <Link className={`showcase-card${promotion.wide ? " showcase-card-wide" : ""}`} href={promotion.href} key={promotion.title}>
+              <Image src={promotion.image.src} alt={promotion.image.alt} fill sizes={promotion.wide ? "(max-width: 760px) 100vw, 55vw" : "(max-width: 760px) 100vw, 28vw"} />
+              <span className="showcase-overlay"><small>{promotion.eyebrow}</small><strong>{promotion.title}</strong><p>{promotion.description}</p><em>{promotion.cta} <ArrowRight /></em></span>
+            </Link>)}
           </div>
           <p className="image-disclaimer">Imagens de produtos e aplicações ilustrativas. A Gesso Empório comercializa os materiais e não executa instalação.</p>
         </div>
