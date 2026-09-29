@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { categories, MAPS_EMBED_URL, testimonials } from "../lib/site-data";
 import { featuredPromotions, getProductDetail, toProductSlug } from "../lib/product-details";
 
@@ -72,4 +74,20 @@ test("homepage promotions form a three-card catalog showcase without pricing", (
     assert.match(promotion.image.src, /^\/images\/.+\.webp$/);
     assert.doesNotMatch(`${promotion.title} ${promotion.description}`, /R\$|preço|desconto/i);
   }
+});
+
+test("every catalog product uses its own local image instead of a category fallback", () => {
+  const usedImages = new Set<string>();
+  for (const category of categories) {
+    for (const item of category.items) {
+      const detail = getProductDetail(category, toProductSlug(item));
+      assert.ok(detail);
+      const image = detail.gallery[0].src;
+      assert.notEqual(image, category.productImageUrl, `${category.name} / ${item} still uses the category fallback`);
+      assert.ok(!usedImages.has(image), `${image} is reused by more than one catalog product`);
+      assert.ok(existsSync(join(process.cwd(), "public", image)), `${image} does not exist in public`);
+      usedImages.add(image);
+    }
+  }
+  assert.equal(usedImages.size, categories.reduce((total, category) => total + category.items.length, 0));
 });

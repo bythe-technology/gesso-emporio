@@ -26,7 +26,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   "placas-de-drywall": {
     description: "Placas para paredes, forros e revestimentos internos, escolhidas conforme umidade, resistência ao fogo e exigência mecânica.",
-    gallery: [media("/images/catalogo-gesso-drywall.webp", "Placas de drywall ST, RU e RF apoiadas em perfis metálicos"), media("/images/produto-placa-performa.webp", "Placas de drywall de alta resistência da linha Performa")],
+    gallery: [media("/images/produto-drywall-cliente.webp", "Placas de drywall ST, RU e RF apoiadas em perfis metálicos"), media("/images/produto-placa-performa.webp", "Placas de drywall de alta resistência da linha Performa")],
     options: ["ST para áreas secas", "RU para ambientes sujeitos à umidade", "RF para aplicações com resistência ao fogo", "Performa ST e RU para maior resistência mecânica e conforto acústico"],
     applications: ["Paredes e revestimentos internos", "Forros", "Ambientes úmidos conforme especificação", "Áreas com exigências mecânicas ou de fogo"],
     variants: [
@@ -85,6 +85,58 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
 };
 
+const catalogProductMedia: Record<string, Record<string, ProductMedia>> = {
+  forros: {
+    drywall: media("/images/produto-forros-drywall.webp", "Painéis de drywall para sistemas de forro"),
+    pvc: media("/images/produto-forros-pvc.webp", "Réguas brancas de PVC para forro"),
+    vinilicos: media("/images/produto-forros-vinilicos.webp", "Painéis vinílicos brancos para forro"),
+    isopor: media("/images/produto-forros-isopor.webp", "Placas decorativas de isopor para forro"),
+    mineral: media("/images/produto-forros-mineral.webp", "Placas de fibra mineral para forro modular"),
+    acusticos: media("/images/produto-forros-acusticos.webp", "Painéis perfurados para tratamento acústico de forros"),
+  },
+  divisorias: {
+    drywall: media("/images/produto-divisorias-drywall.webp", "Sistema de divisória em drywall com placas e montantes"),
+    pvc: media("/images/produto-divisorias-pvc.webp", "Sistema modular branco de divisórias em PVC"),
+    eucatex: media("/images/produto-divisorias-eucatex.webp", "Divisórias modulares em painéis de fibra de madeira Eucatex"),
+    "divisorias-sanitarias": media("/images/produto-divisorias-sanitarias.webp", "Cabines sanitárias em painéis compactos com ferragens"),
+  },
+  "pisos-e-decks": {
+    vinilicos: media("/images/produto-pisos-vinilicos.webp", "Réguas de piso vinílico com acabamento amadeirado"),
+    laminados: media("/images/produto-pisos-laminados.webp", "Réguas de piso laminado com acabamento amadeirado"),
+    "carpete-em-placas-shaw": media("/images/produto-pisos-carpete-shaw.webp", "Amostras de carpete comercial em placas"),
+    "pisos-para-academia": media("/images/produto-pisos-academia.webp", "Placas pretas de piso emborrachado para academia"),
+    "deck-wpc": media("/images/produto-pisos-deck-wpc.webp", "Réguas marrons de deck WPC para áreas externas"),
+  },
+  iluminacao: {
+    spots: media("/images/produto-iluminacao-spots.webp", "Conjunto de spots de LED de embutir"),
+    plafons: media("/images/produto-iluminacao-plafons.webp", "Plafons de LED redondo e quadrado"),
+    "fitas-e-mangueiras-led": media("/images/produto-iluminacao-fitas-led.webp", "Rolos de fita e mangueira flexível de LED"),
+    pendentes: media("/images/produto-iluminacao-pendentes.webp", "Conjunto de luminárias pendentes modernas"),
+    trilhos: media("/images/produto-iluminacao-trilhos.webp", "Trilho de iluminação preto com spots direcionáveis"),
+    refletores: media("/images/produto-iluminacao-refletores.webp", "Refletores compactos de LED para áreas externas"),
+  },
+  "revestimentos-e-acabamentos": {
+    "ripados-internos": media("/images/produto-acabamentos-ripados-internos.webp", "Painéis ripados de madeira para ambientes internos"),
+    "ripados-externos": media("/images/produto-acabamentos-ripados-externos.webp", "Painéis ripados de WPC para áreas externas"),
+    "papeis-adesivos": media("/images/produto-acabamentos-papeis-adesivos.webp", "Rolos e amostras de papéis adesivos decorativos"),
+    "molduras-e-complementos": media("/images/produto-acabamentos-molduras.webp", "Molduras brancas e complementos decorativos"),
+  },
+  "ferramentas-e-acessorios": {
+    "ferramentas-eletricas": media("/images/produto-ferramentas-eletricas.webp", "Furadeira e esmerilhadeira elétricas para obra"),
+    "ferramentas-manuais": media("/images/produto-ferramentas-manuais.webp", "Conjunto de martelo alicate chaves e desempenadeira"),
+    fixadores: media("/images/produto-ferramentas-fixadores.webp", "Conjunto de parafusos e buchas para fixação"),
+    "acessorios-de-instalacao": media("/images/produto-ferramentas-acessorios-instalacao.webp", "Acessórios para instalação e acabamento de drywall"),
+    "itens-de-medicao": media("/images/produto-ferramentas-medicao.webp", "Nível a laser nível de bolha e trena para medição"),
+  },
+  "steel-frame": {
+    "perfis-estruturais": media("/images/produto-steel-frame-perfis-estruturais.webp", "Perfis estruturais galvanizados para steel frame"),
+    placas: media("/images/produto-steel-frame-placas.webp", "Placas estruturais e de fechamento para steel frame"),
+    fixadores: media("/images/produto-steel-frame-fixadores.webp", "Parafusos autobrocantes para estruturas de steel frame"),
+    "componentes-para-fechamento": media("/images/produto-steel-frame-fechamento.webp", "Camadas de componentes para fechamento em steel frame"),
+    acessorios: media("/images/produto-steel-frame-acessorios.webp", "Cantoneiras fitas e conectores metálicos para steel frame"),
+  },
+};
+
 export const featuredPromotions: FeaturedPromotion[] = [
   { title: "Placas Performa", eyebrow: "Resistência para projetos exigentes", description: "Linha ST e RU com maior resistência mecânica, suporte para cargas e conforto acústico.", image: media("/images/produto-placa-performa.webp", "Composição de placas Performa para sistemas de drywall"), href: "/materiais/gesso-e-drywall/placas-de-drywall", cta: "Conheça a linha", wide: true },
   { title: "Gesso em saco de 40 kg", eyebrow: "Revestimento e fundição", description: "Consulte rendimento, aplicação e disponibilidade com a equipe.", image: media("/images/produto-gesso-40kg.webp", "Saco de gesso para revestimento e fundição de 40 kg"), href: "/materiais/gesso-e-drywall/gesso", cta: "Consultar disponibilidade" },
@@ -95,11 +147,12 @@ export function getProductDetail(category: MaterialCategory, productSlug: string
   const name = category.items.find((item) => toProductSlug(item) === productSlug);
   if (!name) return undefined;
   const curated = category.slug === "gesso-e-drywall" ? drywallDetails[productSlug] : undefined;
+  const productMedia = catalogProductMedia[category.slug]?.[productSlug];
   const fallbackImage = media(category.productImageUrl, category.productImageAlt);
   return {
     name, slug: productSlug,
     description: curated?.description ?? `${name}: conheça as opções desta linha e confirme modelos, medidas e aplicações com a equipe da Gesso Empório.`,
-    gallery: curated?.gallery ?? [fallbackImage],
+    gallery: curated?.gallery ?? [productMedia ?? fallbackImage],
     options: curated?.options ?? ["Modelos e medidas para diferentes aplicações", "Cores e acabamentos conforme a linha", "Disponibilidade e quantidade sob consulta"],
     applications: curated?.applications ?? ["Obras residenciais", "Projetos comerciais", "Reformas e manutenção"],
     variants: curated?.variants ?? [],
