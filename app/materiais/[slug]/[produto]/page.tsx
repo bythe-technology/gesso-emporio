@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: Props) {
             <div className="product-gallery">
               {detail.gallery.map((item, index) => (
                 <div className={index === 0 ? "product-gallery-main" : "product-gallery-secondary"} key={item.src}>
-                  <Image src={item.src} alt={item.alt} fill priority={index === 0} sizes="(max-width: 900px) 100vw, 52vw" />
+                  <Image src={item.src} alt={item.alt} fill priority={index < 2} sizes="(max-width: 900px) 100vw, 52vw" />
                 </div>
               ))}
             </div>
