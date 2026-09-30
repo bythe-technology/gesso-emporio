@@ -44,6 +44,7 @@ test("every material item has a stable product route and detail page data", () =
       assert.ok(slug.length > 1);
       assert.equal(detail?.name, item);
       assert.ok((detail?.options.length ?? 0) >= 3);
+      assert.equal(detail?.gallery.length, 1, `${category.name} / ${item} must use a single hero image`);
       assert.match(detail?.gallery[0].src ?? "", /^\/images\/.+\.(?:webp|jpg|png)$/);
       assert.ok((detail?.gallery[0].alt.length ?? 0) > 15);
     }

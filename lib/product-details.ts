@@ -26,7 +26,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   "placas-de-drywall": {
     description: "Placas para paredes, forros e revestimentos internos, escolhidas conforme umidade, resistência ao fogo e exigência mecânica.",
-    gallery: [media("/images/produto-drywall-cliente.webp", "Placas de drywall ST, RU e RF apoiadas em perfis metálicos"), media("/images/produto-placa-performa.webp", "Placas de drywall de alta resistência da linha Performa")],
+    gallery: [media("/images/produto-drywall-cliente.webp", "Placas de drywall ST, RU e RF apoiadas em perfis metálicos")],
     options: ["ST para áreas secas", "RU para ambientes sujeitos à umidade", "RF para aplicações com resistência ao fogo", "Performa ST e RU para maior resistência mecânica e conforto acústico"],
     applications: ["Paredes e revestimentos internos", "Forros", "Ambientes úmidos conforme especificação", "Áreas com exigências mecânicas ou de fogo"],
     variants: [
@@ -47,7 +47,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   perfis: {
     description: "Perfis galvanizados para estruturar paredes, forros e arremates em sistemas de construção a seco.",
-    gallery: [media("/images/produto-perfis.webp", "Conjunto de perfis galvanizados para drywall"), media("/images/produto-sistema-f530.webp", "Composição de perfis e acessórios do sistema para forro F530")],
+    gallery: [media("/images/produto-perfis.webp", "Família de perfis galvanizados e tabica branca para sistemas de drywall")],
     options: ["Perfis para forro F530", "Guias e montantes para paredes", "Tabicas e cantoneiras para arremates"],
     applications: ["Estruturas de paredes", "Forros de drywall", "Encontros, bordas e acabamentos"],
     variants: [
@@ -61,7 +61,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   "complementos-de-instalacao": {
     description: "Fixadores, acessórios de suspensão, fitas e complementos organizados por etapa para facilitar a conferência da lista.",
-    gallery: [media("/images/produto-complementos.webp", "Fitas, parafusos, buchas e acessórios para instalação de drywall"), media("/images/produto-sistema-f530.webp", "Sistema F530 com perfis e acessórios de suspensão")],
+    gallery: [media("/images/produto-complementos.webp", "Fitas, parafusos, buchas e acessórios para instalação de drywall")],
     options: ["Fixação", "Suspensão F530", "Juntas e cantos", "Fincapinos"],
     applications: ["Fixação de placas e perfis", "Suspensão e nivelamento de forros", "Tratamento de juntas e cantos", "Fixação com pistola fincapinos"],
     variants: [
