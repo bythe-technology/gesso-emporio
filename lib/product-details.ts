@@ -39,7 +39,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   massas: {
     description: "Massas para tratamento de juntas, arremates de parafusos e acabamento de sistemas de drywall.",
-    gallery: [media("/images/produto-massas.webp", "Massa para drywall com desempenadeira e acabamento branco")],
+    gallery: [media("/images/produto-massas.webp", "Baldes de massa para drywall com amostra de acabamento branco")],
     options: ["Massa Placomix para drywall", "Tratamento de juntas com fita adequada", "Acabamento de cabeças de parafusos"],
     applications: ["Tratamento de juntas", "Arremate de parafusos", "Regularização e acabamento"],
     variants: [{ name: "Massa para drywall Placomix", image: media("/images/produto-massas.webp", "Massa Placomix para tratamento de juntas de drywall"), use: "Tratamento de juntas, arremates e acabamento do sistema." }],
