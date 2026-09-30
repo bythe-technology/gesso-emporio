@@ -16,7 +16,7 @@ const availability = "Marcas, medidas e disponibilidade podem variar. Confirme o
 const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   gesso: {
     description: "Gesso em pó para revestimento, fundição e colagem, com opções para diferentes etapas da obra.",
-    gallery: [media("/images/produto-gesso-40kg.webp", "Saco de papel de gesso para revestimento e fundição de 40 kg"), media("/images/produto-gesso-cola.webp", "Embalagem real de gesso cola de 5 kg")],
+    gallery: [media("/images/produto-gesso-familia.webp", "Gesso para revestimento e fundição de 40 kg ao lado do Gesso Cola de 5 kg")],
     options: ["Gesso para revestimento e fundição em saco de 40 kg", "Gesso cola em embalagens de 5 kg e 20 kg", "Rendimento e preparo conforme o produto"],
     applications: ["Revestimentos internos", "Fundição de peças", "Colagem de elementos de gesso"],
     variants: [
