@@ -16,7 +16,7 @@ const availability = "Marcas, medidas e disponibilidade podem variar. Confirme o
 const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   gesso: {
     description: "Gesso em pó para revestimento, fundição e colagem, com opções para diferentes etapas da obra.",
-    gallery: [media("/images/produto-gesso-familia.webp", "Gesso para revestimento e fundição de 40 kg ao lado do Gesso Cola de 5 kg")],
+    gallery: [media("/images/produto-gesso-familia.webp", "Embalagem original de gesso para revestimento e fundição de 40 kg")],
     options: ["Gesso para revestimento e fundição em saco de 40 kg", "Gesso cola em embalagens de 5 kg e 20 kg", "Rendimento e preparo conforme o produto"],
     applications: ["Revestimentos internos", "Fundição de peças", "Colagem de elementos de gesso"],
     variants: [
@@ -39,7 +39,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   massas: {
     description: "Massas para tratamento de juntas, arremates de parafusos e acabamento de sistemas de drywall.",
-    gallery: [media("/images/produto-massas.webp", "Baldes de massa para drywall com amostra de acabamento branco")],
+    gallery: [media("/images/produto-massas.webp", "Embalagem Placomix E para tratamento de juntas de drywall")],
     options: ["Massa Placomix para drywall", "Tratamento de juntas com fita adequada", "Acabamento de cabeças de parafusos"],
     applications: ["Tratamento de juntas", "Arremate de parafusos", "Regularização e acabamento"],
     variants: [{ name: "Massa para drywall Placomix", image: media("/images/produto-massas.webp", "Massa Placomix para tratamento de juntas de drywall"), use: "Tratamento de juntas, arremates e acabamento do sistema." }],
@@ -47,7 +47,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   perfis: {
     description: "Perfis galvanizados para estruturar paredes, forros e arremates em sistemas de construção a seco.",
-    gallery: [media("/images/produto-perfis.webp", "Família de perfis galvanizados e tabica branca para sistemas de drywall")],
+    gallery: [media("/images/produto-perfis.webp", "Perfil galvanizado F530 para estrutura de forros de drywall")],
     options: ["Perfis para forro F530", "Guias e montantes para paredes", "Tabicas e cantoneiras para arremates"],
     applications: ["Estruturas de paredes", "Forros de drywall", "Encontros, bordas e acabamentos"],
     variants: [
@@ -61,7 +61,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   "complementos-de-instalacao": {
     description: "Fixadores, acessórios de suspensão, fitas e complementos organizados por etapa para facilitar a conferência da lista.",
-    gallery: [media("/images/produto-complementos.webp", "Fitas, parafusos, buchas e acessórios para instalação de drywall")],
+    gallery: [media("/images/produto-complementos.webp", "Parafusos e buchas de fixação enviados pelo cliente")],
     options: ["Fixação", "Suspensão F530", "Juntas e cantos", "Fincapinos"],
     applications: ["Fixação de placas e perfis", "Suspensão e nivelamento de forros", "Tratamento de juntas e cantos", "Fixação com pistola fincapinos"],
     variants: [
@@ -122,7 +122,7 @@ const catalogProductMedia: Record<string, Record<string, ProductMedia>> = {
     "molduras-e-complementos": media("/images/produto-acabamentos-molduras.webp", "Molduras brancas e complementos decorativos"),
   },
   "ferramentas-e-acessorios": {
-    "ferramentas-eletricas": media("/images/produto-ferramentas-eletricas.webp", "Furadeira e esmerilhadeira elétricas para obra"),
+    "ferramentas-eletricas": media("/images/produto-ferramentas-eletricas.webp", "Kit DeWalt com ferramentas elétricas, baterias, carregador e bolsa"),
     "ferramentas-manuais": media("/images/produto-ferramentas-manuais.webp", "Conjunto de martelo alicate chaves e desempenadeira"),
     fixadores: media("/images/produto-ferramentas-fixadores.webp", "Conjunto de parafusos e buchas para fixação"),
     "acessorios-de-instalacao": media("/images/produto-ferramentas-acessorios-instalacao.webp", "Acessórios para instalação e acabamento de drywall"),
@@ -138,9 +138,9 @@ const catalogProductMedia: Record<string, Record<string, ProductMedia>> = {
 };
 
 export const featuredPromotions: FeaturedPromotion[] = [
-  { title: "Placas Performa", eyebrow: "Resistência para projetos exigentes", description: "Linha ST e RU com maior resistência mecânica, suporte para cargas e conforto acústico.", image: media("/images/produto-placa-performa.webp", "Composição de placas Performa para sistemas de drywall"), href: "/materiais/gesso-e-drywall/placas-de-drywall", cta: "Conheça a linha", wide: true },
+  { title: "Placas Performa", eyebrow: "Resistência para projetos exigentes", description: "Linha ST e RU com maior resistência mecânica, suporte para cargas e conforto acústico.", image: media("/images/produto-placa-performa.webp", "Placa Performa ST do catálogo oficial da Placo"), href: "/materiais/gesso-e-drywall/placas-de-drywall", cta: "Conheça a linha", wide: true },
   { title: "Gesso em saco de 40 kg", eyebrow: "Revestimento e fundição", description: "Consulte rendimento, aplicação e disponibilidade com a equipe.", image: media("/images/produto-gesso-40kg.webp", "Saco de gesso para revestimento e fundição de 40 kg"), href: "/materiais/gesso-e-drywall/gesso", cta: "Consultar disponibilidade" },
-  { title: "Sistema para forro F530", eyebrow: "Perfis e complementos", description: "Perfis, presilhas e acessórios para compor o sistema de suspensão.", image: media("/images/produto-sistema-f530.webp", "Sistema para forro F530 com perfis e acessórios"), href: "/materiais/gesso-e-drywall/perfis", cta: "Ver modelos" },
+  { title: "Sistema para forro F530", eyebrow: "Perfis e complementos", description: "Perfis, presilhas e acessórios para compor o sistema de suspensão.", image: media("/images/produto-sistema-f530.webp", "Perfil F530 do catálogo oficial da Placo"), href: "/materiais/gesso-e-drywall/perfis", cta: "Ver modelos" },
 ];
 
 export function getProductDetail(category: MaterialCategory, productSlug: string): ProductDetail | undefined {

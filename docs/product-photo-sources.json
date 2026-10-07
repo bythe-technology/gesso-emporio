@@ -1,0 +1,271 @@
+{
+  "produto-gesso-40kg.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-de6a6b2f-5702-4e74-90e9-15122f61f325.png",
+    "crop": [
+      26,
+      35,
+      350,
+      324
+    ]
+  },
+  "produto-gesso-cola.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-99095a3b-ddbb-4a35-9127-5cc9187a5b9d.png",
+    "crop": [
+      17,
+      6,
+      342,
+      330
+    ]
+  },
+  "produto-parafuso-ttpc.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-ad95c50f-8525-4f2f-979e-a95dacd91fec.png",
+    "crop": [
+      30,
+      14,
+      351,
+      326
+    ]
+  },
+  "produto-parafuso-trpf.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-ad95c50f-8525-4f2f-979e-a95dacd91fec.png",
+    "crop": [
+      32,
+      480,
+      347,
+      603
+    ]
+  },
+  "produto-parafuso-bucha.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-0faf713f-d063-4864-8084-1adc32c80040.png",
+    "crop": [
+      30,
+      1,
+      261,
+      260
+    ]
+  },
+  "produto-prego-aco.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-0faf713f-d063-4864-8084-1adc32c80040.png",
+    "crop": [
+      30,
+      324,
+      262,
+      565
+    ]
+  },
+  "produto-welfix.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-4f04bf2c-396e-44fd-bce5-93674aec92bf.png",
+    "crop": [
+      21,
+      8,
+      346,
+      189
+    ]
+  },
+  "produto-presilha-f530.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-4f04bf2c-396e-44fd-bce5-93674aec92bf.png",
+    "crop": [
+      26,
+      258,
+      345,
+      577
+    ]
+  },
+  "produto-arame-galvanizado.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-61e61be8-f7bd-4aa8-bc2d-4ef7951748c7.png",
+    "crop": [
+      19,
+      47,
+      344,
+      319
+    ]
+  },
+  "produto-fita-telada-azul.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-29a0618c-ffeb-4193-a415-1aef2cd6cade.png",
+    "crop": [
+      21,
+      40,
+      344,
+      278
+    ]
+  },
+  "produto-fita-telada-branca.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-29a0618c-ffeb-4193-a415-1aef2cd6cade.png",
+    "crop": [
+      22,
+      384,
+      253,
+      650
+    ]
+  },
+  "produto-fita-papel.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-0109457e-8846-487c-b515-fdbdba6d7ba3.png",
+    "crop": [
+      30,
+      25,
+      353,
+      344
+    ]
+  },
+  "produto-fita-aluminio.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-0109457e-8846-487c-b515-fdbdba6d7ba3.png",
+    "crop": [
+      30,
+      391,
+      352,
+      713
+    ]
+  },
+  "produto-fita-pvc.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-1c5bcf2b-bc32-495d-9e98-88f2f0b5f025.png",
+    "crop": [
+      41,
+      43,
+      367,
+      300
+    ]
+  },
+  "produto-veu-vidro.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-1c5bcf2b-bc32-495d-9e98-88f2f0b5f025.png",
+    "crop": [
+      41,
+      349,
+      365,
+      666
+    ]
+  },
+  "produto-tirante-f530.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-de9fe2ab-c73f-44b0-8099-bc6137c01075.png",
+    "crop": [
+      61,
+      175,
+      382,
+      493
+    ]
+  },
+  "produto-multifuncao-f530.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-ff9a49b7-6668-4394-8c75-ceecee7b1d57.png",
+    "crop": [
+      65,
+      30,
+      384,
+      265
+    ]
+  },
+  "produto-fincapinos.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-ff9a49b7-6668-4394-8c75-ceecee7b1d57.png",
+    "crop": [
+      64,
+      411,
+      295,
+      644
+    ]
+  },
+  "produto-massas.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/placomix-e",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2025-10/3D_Placomix_Balde_15kg_PNG.png.webp?itok=JMzDWpj2"
+  },
+  "produto-perfil-f530.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/perfil-f530",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2023-08/perfil_f530.jpg.webp?itok=3aCtxvUK"
+  },
+  "produto-montantes-drywall.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/montante",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2023-08/montante_70.jpg.webp?itok=L2l6ogng"
+  },
+  "produto-guias-drywall.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/guia",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2023-08/guia_70.jpg.webp?itok=rfWQR2X8"
+  },
+  "produto-performa-st.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/performance/placa-performa-125-mm",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2024-02/PLACA%20PERFORMA.png.webp?itok=iVnMPu4l"
+  },
+  "produto-performa-ru.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/performance/placa-performa-ru-125-mm",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2024-09/Performa_RU.jpg.webp?itok=ZYj_lxk4"
+  },
+  "produto-tabica-branca.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://multiperfil.com.br/produto/tabica-lisa-pintada/",
+    "asset": "https://multiperfil.com.br/wp-content/uploads/2024/06/2-Tabica-Lisa-Foto-Produto-Pintada-min.jpg"
+  },
+  "produto-cantoneira-25x30.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://multiperfil.com.br/produto/cantoneira-25x30/",
+    "asset": "https://multiperfil.com.br/wp-content/uploads/2024/06/2-Cantoneira-25x30-Foto-Produto-min.jpg"
+  },
+  "produto-cantoneira-perfurada.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://multiperfil.com.br/produto/cantoneira-perfurada-23x23/",
+    "asset": "https://multiperfil.com.br/wp-content/uploads/2024/06/CANTONEIRA_PERFURADA-min.jpg"
+  },
+  "produto-ferramentas-eletricas.webp": {
+    "kind": "client-original",
+    "reference": "produto-ferramentas-cliente.webp"
+  },
+  "produto-gesso-familia.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-de6a6b2f-5702-4e74-90e9-15122f61f325.png",
+    "crop": [
+      26,
+      35,
+      350,
+      324
+    ],
+    "derivedFrom": "produto-gesso-40kg.webp"
+  },
+  "produto-perfis.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/perfil-f530",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2023-08/perfil_f530.jpg.webp?itok=3aCtxvUK",
+    "derivedFrom": "produto-perfil-f530.webp"
+  },
+  "produto-complementos.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-0faf713f-d063-4864-8084-1adc32c80040.png",
+    "crop": [
+      30,
+      1,
+      261,
+      260
+    ],
+    "derivedFrom": "produto-parafuso-bucha.webp"
+  },
+  "produto-sistema-f530.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/perfil-f530",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2023-08/perfil_f530.jpg.webp?itok=3aCtxvUK",
+    "derivedFrom": "produto-perfil-f530.webp"
+  },
+  "produto-placa-performa.webp": {
+    "kind": "manufacturer-catalog",
+    "page": "https://www.placo.com.br/produtos/performance/placa-performa-125-mm",
+    "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2024-02/PLACA%20PERFORMA.png.webp?itok=iVnMPu4l",
+    "derivedFrom": "produto-performa-st.webp"
+  }
+}

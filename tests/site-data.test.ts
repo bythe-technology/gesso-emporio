@@ -1,9 +1,18 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { categories, MAPS_EMBED_URL, testimonials } from "../lib/site-data";
 import { featuredPromotions, getProductDetail, toProductSlug } from "../lib/product-details";
+
+test("restored catalog photography has traceable non-generative sources", () => {
+  const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
+  assert.ok(Object.keys(sources).length >= 30);
+  for (const [name, source] of Object.entries(sources)) {
+    assert.ok(["client-original", "manufacturer-catalog"].includes(source.kind));
+    assert.ok(existsSync(join(process.cwd(), "public/images", name)));
+  }
+});
 
 test("every material category has a photographic asset and accessible description", () => {
   assert.equal(categories.length, 8);
