@@ -403,17 +403,21 @@
   "produto-steel-frame-fechamento.webp": {
     "kind": "client-original",
     "compositionOf": [
-      "produto-steel-glasroc-x.webp",
-      "produto-steel-placa-cimenticia.webp",
-      "produto-steel-osb.webp"
+      "produto-steel-membrana.webp",
+      "produto-steel-tela-base-coat.webp",
+      "produto-steel-base-coat.webp",
+      "produto-steel-fita-cimenticia.webp",
+      "produto-steel-cantoneira-pvc.webp",
+      "produto-steel-pingadeira-pvc.webp"
     ],
     "processing": "Original crops on white; proportional resize; no rotation or generative editing"
   },
   "produto-steel-frame-acessorios.webp": {
     "kind": "client-original",
     "compositionOf": [
-      "produto-steel-ancoragem-concreto.webp",
-      "produto-steel-parabolt.webp"
+      "produto-steel-ancorador.webp",
+      "produto-steel-cinta.webp",
+      "produto-steel-tensionador.webp"
     ],
     "processing": "Original crops on white; proportional resize; no rotation or generative editing"
   },
@@ -427,5 +431,95 @@
       379
     ],
     "derivedFrom": "produto-steel-frame-perfis-estruturais.webp"
+  },
+  "produto-steel-membrana.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-c4014fd2-fc8e-4d22-b300-456d15886e10.png",
+    "crop": [
+      29,
+      203,
+      350,
+      524
+    ]
+  },
+  "produto-steel-tela-base-coat.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-5000e666-61ea-4ab8-b727-0e849a1ba58e.png",
+    "crop": [
+      15,
+      10,
+      336,
+      321
+    ]
+  },
+  "produto-steel-base-coat.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-b622310d-cb26-41ee-bc92-9d91bea7221f.png",
+    "crop": [
+      17,
+      7,
+      337,
+      326
+    ]
+  },
+  "produto-steel-fita-cimenticia.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-95b7577f-3c97-470f-bd89-5f058ecd020e.png",
+    "crop": [
+      12,
+      4,
+      332,
+      326
+    ]
+  },
+  "produto-steel-cantoneira-pvc.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-12c11aea-f195-4403-b019-b8a4b81be8e9.png",
+    "crop": [
+      18,
+      3,
+      336,
+      179
+    ]
+  },
+  "produto-steel-pingadeira-pvc.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-12c11aea-f195-4403-b019-b8a4b81be8e9.png",
+    "crop": [
+      18,
+      245,
+      336,
+      565
+    ]
+  },
+  "produto-steel-ancorador.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-c81a7b8f-b000-400d-a218-a66a9d4aa76a.png",
+    "crop": [
+      21,
+      255,
+      342,
+      575
+    ]
+  },
+  "produto-steel-cinta.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-7e5ec9cc-dcba-4768-924e-f4ce2f6b8d83.png",
+    "crop": [
+      18,
+      11,
+      339,
+      330
+    ]
+  },
+  "produto-steel-tensionador.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-38e0a829-1767-4d3d-b205-ed827cd85eec.png",
+    "crop": [
+      16,
+      1,
+      320,
+      243
+    ]
   }
 }

@@ -20,6 +20,23 @@ test("steel frame shows the customer boards, fasteners and supplied measurements
   assert.equal(getProductDetail(category, "produto-inexistente"), undefined);
 });
 
+test("steel frame closure components and accessories use the new client batch", () => {
+  const category = categories.find(item => item.slug === "steel-frame");
+  assert.ok(category);
+  const closing = getProductDetail(category, "componentes-para-fechamento");
+  const accessories = getProductDetail(category, "acessorios");
+  assert.equal(closing?.variants.length, 6);
+  assert.deepEqual(closing?.variants[1].measures, ["1 × 50 m"]);
+  assert.deepEqual(closing?.variants[2].measures, ["20 kg"]);
+  assert.deepEqual(closing?.variants.slice(-2).map(item => item.measures), [["2,50 m"], ["2,50 m"]]);
+  assert.deepEqual(accessories?.variants.map(item => item.name), ["Ancorador", "Cinta de contraventamento", "Tensionador de fita de contraventamento"]);
+  const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
+  for (const variant of [...(closing?.variants ?? []), ...(accessories?.variants ?? [])]) {
+    assert.equal(sources[variant.image.src.split("/").pop()!]?.kind, "client-original");
+    assert.ok(existsSync(join(process.cwd(), "public", variant.image.src)));
+  }
+});
+
 test("restored catalog photography has traceable non-generative sources", () => {
   const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
   assert.ok(Object.keys(sources).length >= 30);

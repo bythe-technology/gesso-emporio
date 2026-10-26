@@ -17,6 +17,20 @@ const fixings = [
   { name: "Chumbador parabolt", image: image("produto-steel-parabolt", "Chumbador parabolt com porca e arruela na foto do cliente"), measures: ["Diversos tamanhos"], use: "Ancoragem mecânica conforme base, carga e dimensionamento." },
 ];
 
+const closing = [
+  { name: "Membrana hidrófuga", image: image("produto-steel-membrana", "Rolo de membrana hidrófuga com rótulo original preservado"), measures: ["Tamanhos e medidas sob consulta"], use: "Composição da proteção do fechamento, conforme o sistema especificado." },
+  { name: "Tela de reforço para base coat", image: image("produto-steel-tela-base-coat", "Rolo branco de tela de reforço e detalhe da trama enviados pela loja"), measures: ["1 × 50 m"], use: "Reforço da camada de base coat conforme orientação do sistema." },
+  { name: "Base coat", image: image("produto-steel-base-coat", "Saco original Placo Fachada Rápida basecoat de 20 kg"), measures: ["20 kg"], use: "Camada de base para sistemas de fachada compatíveis com o produto." },
+  { name: "Fita telada para placa cimentícia", image: image("produto-steel-fita-cimenticia", "Rolo cinza de fita telada para placa cimentícia enviado pela loja"), measures: ["Medidas sob consulta"], use: "Reforço do tratamento de juntas conforme especificação do sistema." },
+  { name: "Cantoneira PVC com tela", image: image("produto-steel-cantoneira-pvc", "Cantoneira branca de PVC com tela na fotografia original"), measures: ["2,50 m"], use: "Reforço e acabamento de cantos nos sistemas compatíveis." },
+  { name: "Pingadeira PVC com tela", image: image("produto-steel-pingadeira-pvc", "Detalhe original da pingadeira de PVC com tela de reforço"), measures: ["2,50 m"], use: "Acabamento com pingadeira nas posições previstas pelo projeto." },
+];
+const accessories = [
+  { name: "Ancorador", image: image("produto-steel-ancorador", "Ancorador metálico perfurado na fotografia enviada pelo cliente"), measures: ["Tamanhos e medidas sob consulta"], use: "Ligação e ancoragem da estrutura conforme dimensionamento do projeto." },
+  { name: "Cinta de contraventamento", image: image("produto-steel-cinta", "Cinta metálica de contraventamento no ângulo original da fotografia"), measures: ["Tamanhos e medidas sob consulta"], use: "Composição do contraventamento conforme projeto estrutural." },
+  { name: "Tensionador de fita de contraventamento", image: image("produto-steel-tensionador", "Tensionador metálico com parafuso na fotografia enviada pela loja"), measures: ["Disponibilidade sob consulta"], use: "Ajuste da fita de contraventamento conforme o sistema especificado." },
+];
+
 export const steelFrameDetails: Record<string, CatalogEntry> = {
   "perfis-estruturais": {
     description: "Perfis metálicos para estruturas de Steel Frame, na fotografia fornecida pela loja.",
@@ -38,15 +52,15 @@ export const steelFrameDetails: Record<string, CatalogEntry> = {
     applications: ["Fixação de placas", "União de perfis", "Ancoragem mecânica"], variants: fixings, availabilityNote,
   },
   "componentes-para-fechamento": {
-    description: "Materiais para composição de fechamentos em Steel Frame, escolhidos conforme o projeto.",
-    gallery: [image("produto-steel-frame-fechamento", "Placas Glasroc X, cimentícias e OSB das fotografias da loja")],
-    options: ["Placas Glasroc X", "Placas cimentícias", "Painéis OSB"],
-    applications: ["Fechamentos", "Revestimentos", "Sistemas de Steel Frame"], variants: boards, availabilityNote,
+    description: "Membrana, telas, base coat e arremates para composição dos fechamentos em Steel Frame.",
+    gallery: [image("produto-steel-frame-fechamento", "Composição das fotos originais de membrana, telas, base coat, cantoneira e pingadeira")],
+    options: ["Membrana hidrófuga e tela de reforço", "Base coat de 20 kg e fita para cimentícia", "Cantoneira e pingadeira de PVC com tela"],
+    applications: ["Proteção dos fechamentos", "Reforço de juntas e superfícies", "Arremates de cantos e bordas"], variants: closing, availabilityNote,
   },
   acessorios: {
-    description: "Ancoragens mecânicas para sistemas de Steel Frame, conforme os modelos enviados pela loja.",
-    gallery: [image("produto-steel-frame-acessorios", "Fotografias originais de parafuso para concreto e chumbador parabolt")],
-    options: ["Parafuso para concreto", "Chumbador parabolt", "Tamanhos e compatibilidade sob consulta"],
-    applications: ["Ancoragem mecânica", "Fixação em concreto", "Sistemas conforme dimensionamento"], variants: fixings.slice(-2), availabilityNote,
+    description: "Ancorador, cinta e tensionador de contraventamento para sistemas de Steel Frame.",
+    gallery: [image("produto-steel-frame-acessorios", "Fotos originais de ancorador, cinta e tensionador de contraventamento reunidas")],
+    options: ["Ancorador", "Cinta de contraventamento", "Tensionador de fita de contraventamento"],
+    applications: ["Ancoragem da estrutura", "Contraventamento", "Ajuste da fita conforme projeto"], variants: accessories, availabilityNote,
   },
 };

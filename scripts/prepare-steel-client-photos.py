@@ -17,6 +17,15 @@ PHOTOS = {
     "produto-steel-parafuso-osb.webp": ("4d54e7ce-caee-410a-9166-6b4b7e5924e5", (14, 7, 335, 292)),
     "produto-steel-ancoragem-concreto.webp": ("823e0d4c-48cc-426a-ba11-18eb2ce2467a", (20, 3, 340, 322)),
     "produto-steel-parabolt.webp": ("d6196557-b3ee-493d-9605-04ee2ea4162e", (16, 11, 336, 332)),
+    "produto-steel-membrana.webp": ("c4014fd2-fc8e-4d22-b300-456d15886e10", (29, 203, 350, 524)),
+    "produto-steel-tela-base-coat.webp": ("5000e666-61ea-4ab8-b727-0e849a1ba58e", (15, 10, 336, 321)),
+    "produto-steel-base-coat.webp": ("b622310d-cb26-41ee-bc92-9d91bea7221f", (17, 7, 337, 326)),
+    "produto-steel-fita-cimenticia.webp": ("95b7577f-3c97-470f-bd89-5f058ecd020e", (12, 4, 332, 326)),
+    "produto-steel-cantoneira-pvc.webp": ("12c11aea-f195-4403-b019-b8a4b81be8e9", (18, 3, 336, 179)),
+    "produto-steel-pingadeira-pvc.webp": ("12c11aea-f195-4403-b019-b8a4b81be8e9", (18, 245, 336, 565)),
+    "produto-steel-ancorador.webp": ("c81a7b8f-b000-400d-a218-a66a9d4aa76a", (21, 255, 342, 575)),
+    "produto-steel-cinta.webp": ("7e5ec9cc-dcba-4768-924e-f4ce2f6b8d83", (18, 11, 339, 330)),
+    "produto-steel-tensionador.webp": ("38e0a829-1767-4d3d-b205-ed827cd85eec", (16, 1, 320, 243)),
 }
 
 def contain(photo, size):
@@ -58,11 +67,13 @@ for name, (identifier, crop) in PHOTOS.items():
 
 boards = ["produto-steel-glasroc-x.webp", "produto-steel-placa-cimenticia.webp", "produto-steel-osb.webp"]
 fixings = [name for name in PHOTOS if "parafuso-" in name or "ancoragem-" in name or "parabolt" in name]
+closing = ["produto-steel-membrana.webp", "produto-steel-tela-base-coat.webp", "produto-steel-base-coat.webp", "produto-steel-fita-cimenticia.webp", "produto-steel-cantoneira-pvc.webp", "produto-steel-pingadeira-pvc.webp"]
+steel_accessories = ["produto-steel-ancorador.webp", "produto-steel-cinta.webp", "produto-steel-tensionador.webp"]
 for name, items, columns in [
     ("produto-steel-frame-placas.webp", boards, 3),
     ("produto-steel-frame-fixadores.webp", fixings, 3),
-    ("produto-steel-frame-fechamento.webp", boards, 3),
-    ("produto-steel-frame-acessorios.webp", fixings[-2:], 2),
+    ("produto-steel-frame-fechamento.webp", closing, 3),
+    ("produto-steel-frame-acessorios.webp", steel_accessories, 3),
 ]:
     compose(items, name, columns)
     manifest[name] = {"kind":"client-original", "compositionOf":items, "processing":"Original crops on white; proportional resize; no rotation or generative editing"}
