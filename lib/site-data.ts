@@ -153,7 +153,7 @@ const unorderedCategories: MaterialCategory[] = [
     image: "/images/light-steel-frame.jpg",
     imageAlt: "Estrutura em steel frame, material comercializado pela Gesso Empório",
     productImageUrl: "/images/catalogo-steel-frame.webp",
-    productImageAlt: "Estrutura residencial completa em light steel frame galvanizado",
+    productImageAlt: "Perfis estruturais metálicos na fotografia enviada pela loja",
   },
 ];
 

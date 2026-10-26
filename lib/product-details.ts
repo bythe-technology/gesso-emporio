@@ -1,4 +1,5 @@
 import type { MaterialCategory } from "@/lib/site-data";
+import { steelFrameDetails } from "./steel-frame-details";
 
 export type ProductMedia = { src: string; alt: string };
 export type ProductGroup = "Fixação" | "Suspensão F530" | "Juntas e cantos" | "Fincapinos";
@@ -61,7 +62,7 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
   },
   "complementos-de-instalacao": {
     description: "Fixadores, acessórios de suspensão, fitas e complementos organizados por etapa para facilitar a conferência da lista.",
-    gallery: [media("/images/produto-complementos.webp", "Parafusos e buchas de fixação enviados pelo cliente")],
+    gallery: [media("/images/produto-complementos.webp", "Composição das fotos originais de fixadores, fitas e acessórios enviados pelo cliente")],
     options: ["Fixação", "Suspensão F530", "Juntas e cantos", "Fincapinos"],
     applications: ["Fixação de placas e perfis", "Suspensão e nivelamento de forros", "Tratamento de juntas e cantos", "Fixação com pistola fincapinos"],
     variants: [
@@ -146,7 +147,7 @@ export const featuredPromotions: FeaturedPromotion[] = [
 export function getProductDetail(category: MaterialCategory, productSlug: string): ProductDetail | undefined {
   const name = category.items.find((item) => toProductSlug(item) === productSlug);
   if (!name) return undefined;
-  const curated = category.slug === "gesso-e-drywall" ? drywallDetails[productSlug] : undefined;
+  const curated = category.slug === "gesso-e-drywall" ? drywallDetails[productSlug] : category.slug === "steel-frame" ? steelFrameDetails[productSlug] : undefined;
   const productMedia = catalogProductMedia[category.slug]?.[productSlug];
   const fallbackImage = media(category.productImageUrl, category.productImageAlt);
   return {

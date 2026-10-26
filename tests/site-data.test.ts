@@ -5,6 +5,21 @@ import { join } from "node:path";
 import { categories, MAPS_EMBED_URL, testimonials } from "../lib/site-data";
 import { featuredPromotions, getProductDetail, toProductSlug } from "../lib/product-details";
 
+test("steel frame shows the customer boards, fasteners and supplied measurements", () => {
+  const category = categories.find(item => item.slug === "steel-frame");
+  assert.ok(category);
+  const boards = getProductDetail(category, "placas");
+  assert.deepEqual(boards?.variants.map(item => item.name), ["Placa Glasroc X", "Placa cimentícia", "Painel OSB"]);
+  assert.deepEqual(boards?.variants[2].measures, ["1,20 × 2,40 m", "9,5 mm", "11,1 mm", "15 mm", "18,3 mm"]);
+  const fixings = getProductDetail(category, "fixadores");
+  assert.equal(fixings?.variants.length, 6);
+  assert.deepEqual(fixings?.variants[1].measures, ["4,2 × 32 mm com e sem aleta", "4,8 × 50 mm com aleta"]);
+  for (const item of [...(boards?.variants ?? []), ...(fixings?.variants ?? [])]) {
+    assert.ok(existsSync(join(process.cwd(), "public", item.image.src)));
+  }
+  assert.equal(getProductDetail(category, "produto-inexistente"), undefined);
+});
+
 test("restored catalog photography has traceable non-generative sources", () => {
   const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
   assert.ok(Object.keys(sources).length >= 30);

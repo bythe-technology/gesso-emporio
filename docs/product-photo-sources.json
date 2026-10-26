@@ -247,14 +247,25 @@
   },
   "produto-complementos.webp": {
     "kind": "client-original",
-    "reference": "codex-clipboard-0faf713f-d063-4864-8084-1adc32c80040.png",
-    "crop": [
-      30,
-      1,
-      261,
-      260
+    "compositionOf": [
+      "produto-parafuso-ttpc.webp",
+      "produto-parafuso-trpf.webp",
+      "produto-parafuso-bucha.webp",
+      "produto-prego-aco.webp",
+      "produto-welfix.webp",
+      "produto-presilha-f530.webp",
+      "produto-arame-galvanizado.webp",
+      "produto-tirante-f530.webp",
+      "produto-multifuncao-f530.webp",
+      "produto-fita-telada-azul.webp",
+      "produto-fita-telada-branca.webp",
+      "produto-fita-papel.webp",
+      "produto-fita-aluminio.webp",
+      "produto-fita-pvc.webp",
+      "produto-veu-vidro.webp",
+      "produto-fincapinos.webp"
     ],
-    "derivedFrom": "produto-parafuso-bucha.webp"
+    "processing": "Existing original photographs assembled without rotation or generative editing"
   },
   "produto-sistema-f530.webp": {
     "kind": "manufacturer-catalog",
@@ -267,5 +278,154 @@
     "page": "https://www.placo.com.br/produtos/performance/placa-performa-125-mm",
     "asset": "https://www.placo.com.br/sites/mac3.placo.com.br/files/styles/product_gallery/public/2024-02/PLACA%20PERFORMA.png.webp?itok=iVnMPu4l",
     "derivedFrom": "produto-performa-st.webp"
+  },
+  "produto-steel-frame-perfis-estruturais.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-5e61313d-1bd0-401f-9989-5c61d77be40f.png",
+    "crop": [
+      12,
+      225,
+      420,
+      379
+    ]
+  },
+  "produto-steel-glasroc-x.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-071f523a-d3ad-4fbb-9237-2c81a55121b1.png",
+    "crop": [
+      17,
+      202,
+      340,
+      524
+    ]
+  },
+  "produto-steel-placa-cimenticia.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-d9808c80-92f4-4a8e-aaf1-c71677bc82ea.png",
+    "crop": [
+      16,
+      12,
+      338,
+      332
+    ]
+  },
+  "produto-steel-osb.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-6149aadb-8c43-4038-a856-f75b8ddbb3b2.png",
+    "crop": [
+      9,
+      5,
+      330,
+      298
+    ]
+  },
+  "produto-steel-parafuso-glasroc.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-a417652c-a3d4-4347-9a8e-9033d30c710b.png",
+    "crop": [
+      14,
+      9,
+      334,
+      329
+    ]
+  },
+  "produto-steel-parafuso-cimenticia.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-49d99862-df8f-4bf9-b797-8c206084fd84.png",
+    "crop": [
+      12,
+      9,
+      331,
+      329
+    ]
+  },
+  "produto-steel-parafuso-perfil.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-68198444-278e-47ce-b38e-71d975c70d8d.png",
+    "crop": [
+      17,
+      12,
+      338,
+      265
+    ]
+  },
+  "produto-steel-parafuso-osb.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-4d54e7ce-caee-410a-9166-6b4b7e5924e5.png",
+    "crop": [
+      14,
+      7,
+      335,
+      292
+    ]
+  },
+  "produto-steel-ancoragem-concreto.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-823e0d4c-48cc-426a-ba11-18eb2ce2467a.png",
+    "crop": [
+      20,
+      3,
+      340,
+      322
+    ]
+  },
+  "produto-steel-parabolt.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-d6196557-b3ee-493d-9605-04ee2ea4162e.png",
+    "crop": [
+      16,
+      11,
+      336,
+      332
+    ]
+  },
+  "produto-steel-frame-placas.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-steel-glasroc-x.webp",
+      "produto-steel-placa-cimenticia.webp",
+      "produto-steel-osb.webp"
+    ],
+    "processing": "Original crops on white; proportional resize; no rotation or generative editing"
+  },
+  "produto-steel-frame-fixadores.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-steel-parafuso-glasroc.webp",
+      "produto-steel-parafuso-cimenticia.webp",
+      "produto-steel-parafuso-perfil.webp",
+      "produto-steel-parafuso-osb.webp",
+      "produto-steel-ancoragem-concreto.webp",
+      "produto-steel-parabolt.webp"
+    ],
+    "processing": "Original crops on white; proportional resize; no rotation or generative editing"
+  },
+  "produto-steel-frame-fechamento.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-steel-glasroc-x.webp",
+      "produto-steel-placa-cimenticia.webp",
+      "produto-steel-osb.webp"
+    ],
+    "processing": "Original crops on white; proportional resize; no rotation or generative editing"
+  },
+  "produto-steel-frame-acessorios.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-steel-ancoragem-concreto.webp",
+      "produto-steel-parabolt.webp"
+    ],
+    "processing": "Original crops on white; proportional resize; no rotation or generative editing"
+  },
+  "catalogo-steel-frame.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-5e61313d-1bd0-401f-9989-5c61d77be40f.png",
+    "crop": [
+      12,
+      225,
+      420,
+      379
+    ],
+    "derivedFrom": "produto-steel-frame-perfis-estruturais.webp"
   }
 }
