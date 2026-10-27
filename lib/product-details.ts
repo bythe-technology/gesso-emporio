@@ -1,4 +1,5 @@
 import type { MaterialCategory } from "@/lib/site-data";
+import { forrosDetails } from "./forros-details";
 import { steelFrameDetails } from "./steel-frame-details";
 
 export type ProductMedia = { src: string; alt: string };
@@ -88,12 +89,12 @@ const drywallDetails: Record<string, Omit<ProductDetail, "name" | "slug">> = {
 
 const catalogProductMedia: Record<string, Record<string, ProductMedia>> = {
   forros: {
-    drywall: media("/images/produto-forros-drywall.webp", "Painéis de drywall para sistemas de forro"),
-    pvc: media("/images/produto-forros-pvc.webp", "Réguas brancas de PVC para forro"),
-    vinilicos: media("/images/produto-forros-vinilicos.webp", "Painéis vinílicos brancos para forro"),
-    isopor: media("/images/produto-forros-isopor.webp", "Placas decorativas de isopor para forro"),
-    mineral: media("/images/produto-forros-mineral.webp", "Placas de fibra mineral para forro modular"),
-    acusticos: media("/images/produto-forros-acusticos.webp", "Painéis perfurados para tratamento acústico de forros"),
+    drywall: media("/images/produto-forros-drywall-cliente.webp", "Placas de drywall ST, RU e RF conforme foto enviada pela loja"),
+    pvc: media("/images/produto-forros-pvc-cliente.webp", "Forros de PVC e acabamentos nas fotos enviadas pela loja"),
+    vinilicos: media("/images/produto-forros-vinilicos-cliente.webp", "Revestimentos REVID e painel ripado nas fotos enviadas pela loja"),
+    isopor: media("/images/produto-forros-isopor-cliente.webp", "Forros de isopor nas seis texturas enviadas pela loja"),
+    mineral: media("/images/produto-forros-mineral-cliente.webp", "Placas minerais nos quatro modelos enviados pela loja"),
+    acusticos: media("/images/produto-forros-acusticos-cliente.webp", "Placas acústicas Rigitone, Gyptone e painéis Isover nas fotos enviadas pela loja"),
   },
   divisorias: {
     drywall: media("/images/produto-divisorias-drywall.webp", "Sistema de divisória em drywall com placas e montantes"),
@@ -144,10 +145,16 @@ export const featuredPromotions: FeaturedPromotion[] = [
   { title: "Sistema para forro F530", eyebrow: "Perfis e complementos", description: "Perfis, presilhas e acessórios para compor o sistema de suspensão.", image: media("/images/produto-sistema-f530.webp", "Perfil F530 do catálogo oficial da Placo"), href: "/materiais/gesso-e-drywall/perfis", cta: "Ver modelos" },
 ];
 
+const curatedDetailsByCategory: Record<string, Record<string, Omit<ProductDetail, "name" | "slug">>> = {
+  "gesso-e-drywall": drywallDetails,
+  "steel-frame": steelFrameDetails,
+  forros: forrosDetails,
+};
+
 export function getProductDetail(category: MaterialCategory, productSlug: string): ProductDetail | undefined {
   const name = category.items.find((item) => toProductSlug(item) === productSlug);
   if (!name) return undefined;
-  const curated = category.slug === "gesso-e-drywall" ? drywallDetails[productSlug] : category.slug === "steel-frame" ? steelFrameDetails[productSlug] : undefined;
+  const curated = curatedDetailsByCategory[category.slug]?.[productSlug];
   const productMedia = catalogProductMedia[category.slug]?.[productSlug];
   const fallbackImage = media(category.productImageUrl, category.productImageAlt);
   return {

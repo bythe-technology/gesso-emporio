@@ -521,5 +521,364 @@
       320,
       243
     ]
+  },
+  "produto-forros-drywall-cliente.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-5447400b-4092-4d10-ac79-682886871863.png",
+    "crop": [
+      40,
+      278,
+      359,
+      494
+    ]
+  },
+  "produto-forro-pvc-junta-seca.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-72d15269-f93d-4e52-aadb-66370bbb9ed8.png",
+    "crop": [
+      24,
+      7,
+      344,
+      254
+    ]
+  },
+  "produto-forro-pvc-rustico.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-dfa3c232-115b-4b79-b906-806e9d728fe5.png",
+    "crop": [
+      30,
+      7,
+      348,
+      298
+    ]
+  },
+  "produto-forro-acabamento-u.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-d4f9b0f3-7e89-42da-a1b1-1b9e93733921.png",
+    "crop": [
+      32,
+      11,
+      348,
+      188
+    ]
+  },
+  "produto-forro-acabamento-meia-cana.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-d4f9b0f3-7e89-42da-a1b1-1b9e93733921.png",
+    "crop": [
+      31,
+      280,
+      348,
+      454
+    ]
+  },
+  "produto-forro-acabamento-premium.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-8896faf9-e9b1-46fb-a033-eab27d0d724e.png",
+    "crop": [
+      20,
+      8,
+      336,
+      174
+    ]
+  },
+  "produto-forro-emenda-rigida.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-8896faf9-e9b1-46fb-a033-eab27d0d724e.png",
+    "crop": [
+      20,
+      265,
+      336,
+      440
+    ]
+  },
+  "produto-forro-acabamento-f.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-41ccfab9-b6c7-460c-b0b0-eea7a301793c.png",
+    "crop": [
+      16,
+      10,
+      332,
+      185
+    ]
+  },
+  "produto-forro-revid-sintra-brun-02.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-094b8a1f-feac-4f2c-9f1f-5af5c1723e46.png",
+    "crop": [
+      27,
+      7,
+      325,
+      187
+    ]
+  },
+  "produto-forro-revid-sintra-fulvours-2.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-1abda8b3-258d-41c1-a0c7-78705abafd19.png",
+    "crop": [
+      47,
+      7,
+      363,
+      216
+    ]
+  },
+  "produto-forro-revid-ebano-avela.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-4e738cac-d3a0-4f99-ad82-c7d3b4b03040.png",
+    "crop": [
+      35,
+      7,
+      352,
+      202
+    ]
+  },
+  "produto-forro-revid-ebano-platina.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-269a7d37-1ad9-4576-bd74-e1880ecaa63d.png",
+    "crop": [
+      30,
+      6,
+      348,
+      172
+    ]
+  },
+  "produto-forro-revid-painel-ripado.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-269a7d37-1ad9-4576-bd74-e1880ecaa63d.png",
+    "crop": [
+      29,
+      279,
+      348,
+      487
+    ]
+  },
+  "produto-forros-pvc-cliente.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-forro-pvc-junta-seca.webp",
+      "produto-forro-pvc-rustico.webp",
+      "produto-forro-acabamento-u.webp",
+      "produto-forro-acabamento-meia-cana.webp",
+      "produto-forro-acabamento-premium.webp",
+      "produto-forro-emenda-rigida.webp",
+      "produto-forro-acabamento-f.webp"
+    ],
+    "processing": "Client's original product photographs on white; proportional resize only; no rotation or generative editing"
+  },
+  "produto-forros-vinilicos-cliente.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-forro-revid-sintra-brun-02.webp",
+      "produto-forro-revid-sintra-fulvours-2.webp",
+      "produto-forro-revid-ebano-avela.webp",
+      "produto-forro-revid-ebano-platina.webp",
+      "produto-forro-revid-painel-ripado.webp"
+    ],
+    "processing": "Client's original product photographs on white; proportional resize only; no rotation or generative editing"
+  },
+  "produto-forro-isopor-stylo.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-eb90dcc3-51c4-4fd3-9d3b-173404611411.png",
+    "crop": [
+      32,
+      35,
+      345,
+      270
+    ]
+  },
+  "produto-forro-isopor-originale.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-d7fa0fc3-66a7-408f-b663-b912b43f90d8.png",
+    "crop": [
+      28,
+      35,
+      341,
+      318
+    ]
+  },
+  "produto-forro-isopor-standard.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-2ec53b3e-6018-437c-a2df-a6458b2710bd.png",
+    "crop": [
+      44,
+      35,
+      357,
+      315
+    ]
+  },
+  "produto-forro-isopor-natural-wave.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-fe81e4c7-a866-488f-9269-a6de5d482294.png",
+    "crop": [
+      24,
+      35,
+      337,
+      315
+    ]
+  },
+  "produto-forro-isopor-decore.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-36a127de-6762-430f-a016-9ab42b1a85e7.png",
+    "crop": [
+      27,
+      35,
+      340,
+      315
+    ]
+  },
+  "produto-forro-isopor-black.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-87528ed3-9b45-45e5-a3b0-7ff7e6230b3d.png",
+    "crop": [
+      21,
+      35,
+      334,
+      315
+    ]
+  },
+  "produto-forros-isopor-cliente.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-forro-isopor-stylo.webp",
+      "produto-forro-isopor-originale.webp",
+      "produto-forro-isopor-standard.webp",
+      "produto-forro-isopor-natural-wave.webp",
+      "produto-forro-isopor-decore.webp",
+      "produto-forro-isopor-black.webp"
+    ],
+    "processing": "Client's original product photographs and model labels on white; proportional resize only; no rotation or generative editing"
+  },
+  "produto-forro-mineral-decore-standard.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-a3b7137a-2ba2-47d1-845e-7b4c465c299c.png",
+    "crop": [
+      16,
+      9,
+      342,
+      337
+    ]
+  },
+  "produto-forro-mineral-espacoforro-austral.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-e35b1505-8483-440d-aca9-1c6f388082a3.png",
+    "crop": [
+      23,
+      7,
+      348,
+      331
+    ]
+  },
+  "produto-forro-mineral-armstrong-georgian.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-670e156f-842a-4232-9385-24e9d6dcbe73.png",
+    "crop": [
+      32,
+      11,
+      357,
+      335
+    ]
+  },
+  "produto-forro-mineral-cosmos-black.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-bec647bd-237d-4dcb-b910-a260c2b971c0.png",
+    "crop": [
+      22,
+      7,
+      347,
+      330
+    ]
+  },
+  "produto-forro-acustico-rigitone-edge-12-25.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-958de965-a5a5-44d8-aad4-9b4f69fac6f4.png",
+    "crop": [
+      3,
+      16,
+      323,
+      326
+    ]
+  },
+  "produto-forro-acustico-gyptone-big-quattro-41.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-6567976b-8812-48b9-87fa-1d7e612c1b42.png",
+    "crop": [
+      13,
+      11,
+      338,
+      228
+    ]
+  },
+  "produto-forro-acustico-rigitone-edge-8-18.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-ff6959e1-c5de-49b8-b288-1a3a3ddf4693.png",
+    "crop": [
+      24,
+      8,
+      347,
+      280
+    ]
+  },
+  "produto-forro-acustico-gyptone-quattro-20.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-f7541571-967a-460b-86cc-509122e45583.png",
+    "crop": [
+      27,
+      12,
+      261,
+      283
+    ]
+  },
+  "produto-forro-acustico-rigitone-edge-8-15-20.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-41068fcd-1d19-4bf9-b209-161754066dc3.png",
+    "crop": [
+      7,
+      3,
+      331,
+      313
+    ]
+  },
+  "produto-forro-acustico-isover.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-eb3506e7-08ff-4843-90b6-65545943e9cf.png",
+    "crop": [
+      24,
+      35,
+      340,
+      335
+    ]
+  },
+  "produto-forro-acustico-isover-black.webp": {
+    "kind": "client-original",
+    "reference": "codex-clipboard-339d7d77-43ae-4883-a7e7-76afaef5e703.png",
+    "crop": [
+      24,
+      35,
+      340,
+      326
+    ]
+  },
+  "produto-forros-mineral-cliente.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-forro-mineral-decore-standard.webp",
+      "produto-forro-mineral-espacoforro-austral.webp",
+      "produto-forro-mineral-armstrong-georgian.webp",
+      "produto-forro-mineral-cosmos-black.webp"
+    ],
+    "processing": "Client's original product photographs on white; proportional resize only; no rotation or generative editing"
+  },
+  "produto-forros-acusticos-cliente.webp": {
+    "kind": "client-original",
+    "compositionOf": [
+      "produto-forro-acustico-rigitone-edge-12-25.webp",
+      "produto-forro-acustico-gyptone-big-quattro-41.webp",
+      "produto-forro-acustico-rigitone-edge-8-18.webp",
+      "produto-forro-acustico-gyptone-quattro-20.webp",
+      "produto-forro-acustico-rigitone-edge-8-15-20.webp",
+      "produto-forro-acustico-isover.webp",
+      "produto-forro-acustico-isover-black.webp"
+    ],
+    "processing": "Client's original product photographs on white; proportional resize only; no rotation or generative editing"
   }
 }

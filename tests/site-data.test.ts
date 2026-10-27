@@ -37,6 +37,121 @@ test("steel frame closure components and accessories use the new client batch", 
   }
 });
 
+test("forro catalog uses the customer's drywall, PVC and REVID product photos", () => {
+  const category = categories.find(item => item.slug === "forros");
+  assert.ok(category);
+
+  const drywall = getProductDetail(category, "drywall");
+  assert.deepEqual(drywall?.options, [
+    "Placa ST para áreas secas",
+    "Placa RU para ambientes sujeitos à umidade",
+    "Placa RF para sistemas com exigência de resistência ao fogo",
+  ]);
+  assert.match(drywall?.gallery[0].src ?? "", /produto-forros-drywall-cliente\.webp$/);
+
+  const pvc = getProductDetail(category, "pvc");
+  assert.deepEqual(pvc?.variants.map(item => item.name), [
+    "Forro PVC junta seca",
+    "Forro rústico junta seca",
+    "Acabamento U",
+    "Acabamento meia-cana",
+    "Acabamento premium",
+    "Emenda rígida",
+    "Acabamento F",
+  ]);
+  assert.equal(new Set(pvc?.variants.map(item => item.image.src)).size, 7);
+  assert.deepEqual(pvc?.variants[0].measures, ["7 mm", "10 mm", "Cores sob consulta"]);
+
+  const vinyl = getProductDetail(category, "vinilicos");
+  assert.deepEqual(vinyl?.variants.map(item => item.name), [
+    "REVID — Sintra Brun 02",
+    "REVID — Sintra Fulvours 2",
+    "REVID — Ébano Avelã",
+    "REVID — Ébano Platina",
+    "REVID — Painel ripado",
+  ]);
+  assert.ok(vinyl?.options.includes("+ de 30 modelos disponíveis"));
+  assert.deepEqual(vinyl?.variants[0].measures, ["10 mm", "2,70 m", "4,00 m", "6,00 m"]);
+
+  const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
+  for (const detail of [drywall, pvc, vinyl]) {
+    assert.ok(detail);
+    assert.equal(detail.gallery.length, 1);
+    assert.ok(detail.gallery[0].alt.length > 20);
+    for (const photo of [...detail.gallery, ...detail.variants.map(variant => variant.image)]) {
+      const filename = photo.src.split("/").pop()!;
+      assert.equal(sources[filename]?.kind, "client-original");
+      assert.ok(existsSync(join(process.cwd(), "public/images", filename)));
+    }
+  }
+});
+
+test("isopor ceilings show the six supplied textures and the customer's sizes", () => {
+  const category = categories.find(item => item.slug === "forros");
+  assert.ok(category);
+  const isopor = getProductDetail(category, "isopor");
+  assert.deepEqual(isopor?.variants.map(item => item.name), [
+    "Forro isopor textura STYLO",
+    "Forro isopor textura ORIGINALE",
+    "Forro isopor textura STANDARD",
+    "Forro isopor textura WAVE",
+    "Forro isopor textura DECORE",
+    "Forro isopor textura BLACK",
+  ]);
+  assert.ok(isopor?.options.includes("Dimensão informada: 1243 × 618 mm"));
+  for (const variant of isopor?.variants ?? []) {
+    assert.deepEqual(variant.measures, ["20 mm", "40 mm", "1243 × 618 mm"]);
+  }
+  const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
+  for (const photo of [...(isopor?.gallery ?? []), ...(isopor?.variants.map(variant => variant.image) ?? [])]) {
+    const filename = photo.src.split("/").pop()!;
+    assert.equal(sources[filename]?.kind, "client-original");
+    assert.ok(existsSync(join(process.cwd(), "public/images", filename)));
+  }
+});
+
+test("mineral and acoustic ceilings show supplied models, measurements and photos", () => {
+  const category = categories.find(item => item.slug === "forros");
+  assert.ok(category);
+  const mineral = getProductDetail(category, "mineral");
+  assert.deepEqual(mineral?.variants.map(item => item.name), [
+    "Forro mineral Decore Standard branco",
+    "Forro mineral tegular EspaçoForro E-Decore Austral branco",
+    "Forro mineral lay-in Armstrong Ceilings Georgian branco",
+    "Forro mineral lay-in EspaçoForro E-Decore Cosmos Black preto",
+  ]);
+  assert.deepEqual(mineral?.variants.map(item => item.measures), [
+    ["12 mm", "625 × 625 mm", "625 × 1250 mm"],
+    ["14 mm", "625 × 625 mm"],
+    ["15 mm", "625 × 625 mm", "625 × 1250 mm"],
+    ["12 mm", "625 × 625 mm"],
+  ]);
+
+  const acoustic = getProductDetail(category, "acusticos");
+  assert.deepEqual(acoustic?.variants.map(item => item.name), [
+    "RIGITONE EDGE 12/25 Quadrada",
+    "GYPTONE BIG QUATTRO 41",
+    "RIGITONE EDGE 8/18",
+    "GYPTONE QUATTRO 20",
+    "RIGITONE EDGE 8-15-20 SUPER",
+    "Forro lã de vidro Isover",
+    "Forro lã de vidro Isover Black",
+  ]);
+  assert.deepEqual(acoustic?.variants[4].measures, ["12,5 mm", "1200 × 1960 mm"]);
+  assert.deepEqual(acoustic?.variants[5].measures, ["15 mm", "25 mm", "625 × 625 mm", "625 × 1250 mm"]);
+
+  const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
+  for (const detail of [mineral, acoustic]) {
+    assert.ok(detail);
+    assert.equal(detail.gallery.length, 1);
+    for (const photo of [...detail.gallery, ...detail.variants.map(variant => variant.image)]) {
+      const filename = photo.src.split("/").pop()!;
+      assert.equal(sources[filename]?.kind, "client-original");
+      assert.ok(existsSync(join(process.cwd(), "public/images", filename)));
+    }
+  }
+});
+
 test("restored catalog photography has traceable non-generative sources", () => {
   const sources = JSON.parse(readFileSync(join(process.cwd(), "docs/product-photo-sources.json"), "utf8")) as Record<string, { kind: string }>;
   assert.ok(Object.keys(sources).length >= 30);
